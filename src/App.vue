@@ -5,7 +5,7 @@
     </div>
     <div class="container mx-auto pt-10 px-2">
       <h2>Tableau</h2>
-      <div class="grid grid-cols-1">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <RoundComponent
           v-for="(round, index) in rounds"
           :round="round"
