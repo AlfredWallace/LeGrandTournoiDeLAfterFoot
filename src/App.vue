@@ -1,13 +1,17 @@
 <template>
   <div>
-    <div class="text-center align-middle shadow-xl fixed w-screen h-8">
+    <div class="text-center align-middle shadow-xl fixed w-screen h-8 bg-white">
       <h1>Le Grand Tournoi de l'After Foot</h1>
     </div>
     <div class="container mx-auto pt-10 px-2">
       <h2>Tableau</h2>
       <div class="grid grid-cols-1">
-        <Round v-for="(round, index) in rounds" :round="round" :key="index">
-        </Round>
+        <RoundComponent
+          v-for="(round, index) in rounds"
+          :round="round"
+          :key="index"
+        >
+        </RoundComponent>
       </div>
 
       <p class="mt-2">
@@ -35,135 +39,115 @@
 </template>
 
 <script>
-import Round from "./components/Round";
+import RoundComponent from "./components/RoundComponent";
+import { Match, Player, Round, Side } from "./types";
+
 export default {
   name: "App",
   components: {
-    Round
+    RoundComponent
   },
   data() {
     return {
       players: {
-        gbr: {
-          name: "Gilbert Brisbois",
-          rank: 1
-        },
-        max: {
-          name: "Max du standard",
-          rank: null
-        },
-        edm: {
-          name: "Éric Di Meco",
-          rank: null
-        },
-        kdi: {
-          name: "Kévin Diaz",
-          rank: 8
-        },
-        dpe: {
-          name: "Damien Perrinelle",
-          rank: 5
-        },
-        jth: {
-          name: "Jérôme Thomas",
-          rank: null
-        },
-        pdu: {
-          name: "Pierre Ducrocq",
-          rank: null
-        },
-        jmh: {
-          name: "Jonathan MacHardy",
-          rank: 4
-        },
-        jro: {
-          name: "Jérôme Rothen",
-          rank: 3
-        },
-        aro: {
-          name: "Arthur Robert",
-          rank: null
-        },
-        fpi: {
-          name: "Frédéric Piquionne",
-          rank: null
-        },
-        llp: {
-          name: "Laure Lepailleur",
-          rank: 6
-        },
-        nja: {
-          name: "Nicolas Jamain",
-          rank: 7
-        },
-        lch: {
-          name: "Lionel Charbonnier",
-          rank: null
-        },
-        pve: {
-          name: "Paul Vexiau",
-          rank: null
-        },
-        dri: {
-          name: "Daniel Riolo",
-          rank: 2
-        }
+        gbr: new Player("Gilbert Brisbois", 1),
+        max: new Player("Max du standard", null),
+        edm: new Player("Éric Di Meco", null),
+        kdi: new Player("Kévin Diaz", 8),
+        dpe: new Player("Damien Perrinelle", 5),
+        jth: new Player("Jérôme Thomas", null),
+        pdu: new Player("Pierre Ducrocq", null),
+        jmh: new Player("Jonathan MacHardy", 4),
+        jro: new Player("Jérôme Rothen", 3),
+        aro: new Player("Arthur Robert", null),
+        fpi: new Player("Frédéric Piquionne", null),
+        llp: new Player("Laure Lepailleur", 6),
+        nja: new Player("Nicolas Jamain", 7),
+        lch: new Player("Lionel Charbonnier", null),
+        pve: new Player("Paul Vexiau", null),
+        dri: new Player("Daniel Riolo", 2)
       }
     };
   },
   computed: {
     rounds() {
       return [
-        {
-          title: "Huitièmes",
-          matches: [
-            {
-              order: 1,
-              date: "7 avril 2020",
-              home: {
-                player: this.players.gbr,
-                score: 6
-              },
-              away: {
-                player: this.players.max,
-                score: 5
-              }
-            },
-            {
-              order: 2,
-              date: "9 avril 2020",
-              home: {
-                player: this.players.edm,
-                score: 4
-              },
-              away: {
-                player: this.players.kdi,
-                score: 7
-              }
-            },
-            {
-              order: 3,
-              date: "15 avril 2020",
-              home: {
-                player: this.players.dpe,
-                score: 8
-              },
-              away: {
-                player: this.players.jth,
-                score: 7
-              }
-            }
-          ]
-        },
-        {
-          title: "Quarts"
-        },
-        {
-          title: "Demies"
-        },
-        {
-          title: "Finale"
-        }
+        new Round("Huitièmes", [
+          new Match(
+            1,
+            "7 avril 2020",
+            new Side(this.players.gbr, 6),
+            new Side(this.players.max, 5)
+          ),
+          new Match(
+            2,
+            "9 avril 2020",
+            new Side(this.players.edm, 4),
+            new Side(this.players.kdi, 7)
+          ),
+          new Match(
+            3,
+            "15 avril 2020",
+            new Side(this.players.dpe, 8),
+            new Side(this.players.jth, 7)
+          ),
+          new Match(
+            4,
+            "8 avril 2020",
+            new Side(this.players.pdu, 4),
+            new Side(this.players.jmh, 8)
+          ),
+          new Match(
+            5,
+            "16 avril 2020",
+            new Side(this.players.jro, 11),
+            new Side(this.players.aro, 4)
+          ),
+          new Match(
+            6,
+            "14 avril 2020",
+            new Side(this.players.fpi, 7),
+            new Side(this.players.llp, 9)
+          ),
+          new Match(
+            7,
+            "10 avril 2020",
+            new Side(this.players.nja, 10),
+            new Side(this.players.lch, 2)
+          ),
+          new Match(
+            8,
+            "13 avril 2020",
+            new Side(this.players.pve, 3),
+            new Side(this.players.dri, 9)
+          )
+        ]),
+        new Round("Quarts", [
+          new Match(
+            1,
+            "",
+            new Side(this.players.gbr, null),
+            new Side(this.players.kdi, null)
+          ),
+          new Match(
+            2,
+            "",
+            new Side(this.players.dpe, null),
+            new Side(this.players.jmh, null)
+          ),
+          new Match(
+            3,
+            "",
+            new Side(this.players.jro, null),
+            new Side(this.players.llp, null)
+          ),
+          new Match(
+            4,
+            "",
+            new Side(this.players.nja, null),
+            new Side(this.players.dri, null)
+          )
+        ])
       ];
     }
   }
