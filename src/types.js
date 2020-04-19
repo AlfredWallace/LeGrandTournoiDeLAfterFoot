@@ -1,6 +1,9 @@
 export class Player {
-  constructor(name, rank) {
-    this.name = name;
+  constructor(firstName, lastName, rank) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.name = firstName + " " + lastName;
+    this.shortName = firstName.charAt(0) + ". " + lastName;
     this.rank = rank;
   }
 }

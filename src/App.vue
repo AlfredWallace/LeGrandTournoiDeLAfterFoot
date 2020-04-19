@@ -84,22 +84,22 @@ export default {
   data() {
     return {
       players: {
-        gbr: new Player("Gilbert Brisbois", 1),
-        max: new Player("Max du standard", null),
-        edm: new Player("Éric Di Meco", null),
-        kdi: new Player("Kévin Diaz", 8),
-        dpe: new Player("Damien Perrinelle", 5),
-        jth: new Player("Jérôme Thomas", null),
-        pdu: new Player("Pierre Ducrocq", null),
-        jmh: new Player("Jonathan MacHardy", 4),
-        jro: new Player("Jérôme Rothen", 3),
-        aro: new Player("Arthur Robert", null),
-        fpi: new Player("Frédéric Piquionne", null),
-        llp: new Player("Laure Lepailleur", 6),
-        nja: new Player("Nicolas Jamain", 7),
-        lch: new Player("Lionel Charbonnier", null),
-        pve: new Player("Paul Vexiau", null),
-        dri: new Player("Daniel Riolo", 2)
+        gbr: new Player("Gilbert", "Brisbois", 1),
+        max: new Player("Max", "Dustendarre", null),
+        edm: new Player("Éric", "Di Meco", null),
+        kdi: new Player("Kévin", "Diaz", 8),
+        dpe: new Player("Damien", "Perrinelle", 5),
+        jth: new Player("Jérôme", "Thomas", null),
+        pdu: new Player("Pierre", "Ducrocq", null),
+        jmh: new Player("Jonathan", "MacHardy", 4),
+        jro: new Player("Jérôme", "Rothen", 3),
+        aro: new Player("Arthur", "Robert", null),
+        fpi: new Player("Frédéric", "Piquionne", null),
+        llp: new Player("Laure", "Lepailleur", 6),
+        nja: new Player("Nicolas", "Jamain", 7),
+        lch: new Player("Lionel", "Charbonnier", null),
+        pve: new Player("Paul", "Vexiau", null),
+        dri: new Player("Daniel", "Riolo", 2)
       }
     };
   },

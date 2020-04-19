@@ -1,10 +1,13 @@
 <template functional>
   <div class="shadow-md p-2 border border-solid rounded-lg">
-    <h3>
-      {{ props.match.home.player.name }} vs.
-      {{ props.match.away.player.name }} -
+    <div class="text-center text-xs">
       {{ props.match.readableDate }}
-    </h3>
+    </div>
+    <div class="text-center font-semibold mb-3">
+      {{ props.match.home.player.shortName }}
+      <span class="font-normal text-xs">vs.</span>
+      {{ props.match.away.player.shortName }}
+    </div>
     <p class="text-justify">
       {{ props.match.summary }}
     </p>
