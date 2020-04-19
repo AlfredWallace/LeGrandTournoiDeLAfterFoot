@@ -5,7 +5,7 @@
       {{ props.match.away.player.name }} -
       {{ props.match.readableDate }}
     </h3>
-    <p>
+    <p class="text-justify">
       {{ props.match.summary }}
     </p>
   </div>

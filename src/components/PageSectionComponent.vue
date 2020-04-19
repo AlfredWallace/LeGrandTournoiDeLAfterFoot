@@ -1,8 +1,10 @@
 <template>
   <div class="pt-10">
-    <h2>{{ title }}</h2>
+    <h2 class="text-xl md:text-2xl xl:text-3xl font-bold text-center mb-2">
+      {{ title }}
+    </h2>
     <slot></slot>
-    <hr />
+    <hr class="mt-2" />
   </div>
 </template>
 

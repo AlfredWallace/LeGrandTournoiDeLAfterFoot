@@ -1,9 +1,13 @@
 <template>
-  <div class="font-sans text-gray-800">
-    <div class="text-center align-middle shadow-lg fixed w-screen h-8 bg-white">
-      <h1>Le Grand Tournoi de l'After Foot</h1>
+  <div class="font-sans text-gray-700">
+    <div
+      class="text-center align-middle shadow-lg fixed w-screen bg-white py-1"
+    >
+      <h1 class="text-xl md:text-2xl xl:text-3xl font-bold">
+        Le Grand Tournoi de l'After Foot
+      </h1>
     </div>
-    <div class="container mx-auto px-2">
+    <div class="container mx-auto px-2 md:pt-2 xl:pt-4">
       <PageSectionComponent title="Tableau">
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
           <RoundComponent
@@ -25,24 +29,40 @@
         </div>
       </PageSectionComponent>
 
-      <PageSectionComponent title="Explication">
-        Le Grand Tournoi est un format inédit du traditionnel quizz de l'After
-        Foot (animé par Julien Cazarre) sous forme de tableau de duels à
-        élimination directe, commençant en 1/8e de finales. Il est instauré en
-        2020 suite au confinement national français dû à l'épidémie de Covid-19
-        en France|Covid-19. Les deux aspects du format du Grand Tournoi sont
-        justifiés ainsi : * La composition des participants (soit par équipes,
-        soit un grand chacun-pour-soi) est abandonnée au profit de duels,
-        limitant ainsi les chances de propagation du virus. * L'organisation
-        (précédemment sous la forme de journées, typique d'un championnat) est
-        abandonnée au profit d'un tableau à élimination directe. Cette mesure
-        est adoptée pour raccourcir la saison et la terminer à tout prix, les
-        pertes des droits TV et des contrats de sponsoring pouvant mettre en
-        danger la santé financière des participants. Le tournoi verra
-        s'affronter les 8 participants habituels classés selon leur rang à la
-        Race au moment du début du Grand Tournoi, ainsi que 8 invités plus ou
-        moins prestigieux, assignés de manière aléatoire. Chaque match se joue
-        en 10 minutes.
+      <PageSectionComponent title="Contexte">
+        <div class="p-2 border border-solid rounded-lg shadow-lg">
+          <p class="my-2">
+            Le Grand Tournoi est un format inédit du traditionnel quizz de
+            l'After Foot (animé par Julien Cazarre) sous forme de tableau de
+            duels à élimination directe, commençant en 1/8e de finales. Il est
+            instauré en 2020 suite au confinement national français dû à
+            l'épidémie de Covid-19.
+          </p>
+          <div class="mb-2">
+            Les deux aspects du format du Grand Tournoi sont justifiés ainsi :
+            <ul class="list-disc pl-6">
+              <li>
+                La composition des participants (soit par équipes, soit un grand
+                chacun-pour-soi) est abandonnée au profit de duels, limitant
+                ainsi les chances de propagation du virus.
+              </li>
+              <li>
+                L'organisation (précédemment sous la forme de journées, typique
+                d'un championnat) est abandonnée au profit d'un tableau à
+                élimination directe. Cette mesure est adoptée pour raccourcir la
+                saison et la terminer à tout prix, les pertes des droits TV et
+                des contrats de sponsoring pouvant mettre en danger la santé
+                financière des participants.
+              </li>
+            </ul>
+          </div>
+          <p>
+            Le tournoi verra s'affronter les 8 participants habituels classés
+            selon leur rang à la Race au moment du début du Grand Tournoi, ainsi
+            que 8 invités plus ou moins prestigieux, assignés de manière
+            aléatoire. Chaque match se joue en 10 minutes.
+          </p>
+        </div>
       </PageSectionComponent>
     </div>
   </div>
