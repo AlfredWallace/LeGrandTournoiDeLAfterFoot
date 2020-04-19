@@ -1,5 +1,5 @@
 <template functional>
-  <div class="shadow-md p-2 border border-solid rounded-lg">
+  <div class="shadow-md p-2 border border-solid">
     <div class="text-center text-xs">
       {{ props.match.readableDate }}
     </div>
