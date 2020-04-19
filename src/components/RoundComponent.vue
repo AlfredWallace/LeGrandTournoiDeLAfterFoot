@@ -1,11 +1,13 @@
 <template>
   <div>
     <h3>{{ round.title }}</h3>
-    <MatchComponent
-      v-for="(match, index) in round.matches"
-      :key="index"
-      :match="match"
-    ></MatchComponent>
+    <div class="flex flex-col justify-around h-full">
+      <MatchComponent
+        v-for="(match, index) in round.matches"
+        :key="index"
+        :match="match"
+      ></MatchComponent>
+    </div>
   </div>
 </template>
 
