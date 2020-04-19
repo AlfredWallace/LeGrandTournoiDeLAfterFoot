@@ -1,11 +1,11 @@
 <template>
-  <div class="font-sans">
+  <div class="font-sans text-gray-800">
     <div class="text-center align-middle shadow-lg fixed w-screen h-8 bg-white">
       <h1>Le Grand Tournoi de l'After Foot</h1>
     </div>
     <div class="container mx-auto px-2">
       <PageSectionComponent title="Tableau">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
           <RoundComponent
             v-for="(round, index) in rounds"
             :round="round"

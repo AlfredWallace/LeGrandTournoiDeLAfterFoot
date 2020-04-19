@@ -7,9 +7,11 @@
     >
       <tbody>
         <tr
-          :class="{
-            'bg-green-400': props.match.home.score > props.match.away.score
-          }"
+          :class="[
+            props.match.home.score > props.match.away.score
+              ? 'bg-green-200 font-semibold'
+              : 'text-gray-600'
+          ]"
         >
           <td class="side-td">
             {{ props.match.home.player.name }}
@@ -22,9 +24,11 @@
           </td>
         </tr>
         <tr
-          :class="{
-            'bg-green-400': props.match.away.score > props.match.home.score
-          }"
+          :class="[
+            props.match.away.score > props.match.home.score
+              ? 'bg-green-200 font-semibold'
+              : 'text-gray-600'
+          ]"
         >
           <td class="side-td">
             {{ props.match.away.player.name }}
