@@ -1,6 +1,6 @@
 <template functional>
   <div
-    class="shadow-lg my-2 table-fixed font-mono border border-solid rounded-lg border-collapse"
+    class="shadow-md my-2 table-fixed font-mono border border-solid rounded-lg border-collapse"
   >
     <table
       class="w-full overflow-hidden border border-solid rounded-lg border-collapse"

@@ -1,6 +1,10 @@
 <template>
   <div class="flex flex-col">
-    <h3>{{ round.title }}</h3>
+    <h3
+      class="shadow-lg p-2 mb-2 border border-solid rounded-lg font-semibold text-xl"
+    >
+      {{ round.title }}
+    </h3>
     <div class="flex flex-col justify-around flex-grow">
       <MatchComponent
         v-for="(match, index) in round.matches"

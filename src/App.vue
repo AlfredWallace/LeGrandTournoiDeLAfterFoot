@@ -30,7 +30,7 @@
       </PageSectionComponent>
 
       <PageSectionComponent title="Contexte">
-        <div class="p-2 border border-solid rounded-lg shadow-lg">
+        <div class="p-2 border border-solid rounded-lg shadow-md">
           <p class="my-2">
             Le Grand Tournoi est un format inédit du traditionnel quizz de
             l'After Foot (animé par Julien Cazarre) sous forme de tableau de

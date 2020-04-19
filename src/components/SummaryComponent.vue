@@ -1,5 +1,5 @@
 <template functional>
-  <div class="shadow-lg p-2 border border-solid rounded-lg">
+  <div class="shadow-md p-2 border border-solid rounded-lg">
     <h3>
       {{ props.match.home.player.name }} vs.
       {{ props.match.away.player.name }} -
