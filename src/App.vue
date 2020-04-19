@@ -1,32 +1,31 @@
 <template>
   <div class="font-sans">
-    <div class="text-center align-middle shadow-xl fixed w-screen h-8 bg-white">
+    <div class="text-center align-middle shadow-lg fixed w-screen h-8 bg-white">
       <h1>Le Grand Tournoi de l'After Foot</h1>
     </div>
-    <div class="container mx-auto pt-10 px-2">
-      <h2>Tableau</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <RoundComponent
-          v-for="(round, index) in rounds"
-          :round="round"
-          :key="index"
-        >
-        </RoundComponent>
-      </div>
+    <div class="container mx-auto px-2">
+      <PageSectionComponent title="Tableau">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <RoundComponent
+            v-for="(round, index) in rounds"
+            :round="round"
+            :key="index"
+          >
+          </RoundComponent>
+        </div>
+      </PageSectionComponent>
 
-      <hr />
+      <PageSectionComponent title="Déroulé de la compétition">
+        <div class="grid grid-cols-1 gap-6">
+          <SummaryComponent
+            v-for="(match, index) in matchesByDate"
+            :key="index"
+            :match="match"
+          ></SummaryComponent>
+        </div>
+      </PageSectionComponent>
 
-      <h2>Déroulé de la compétition :</h2>
-      <SummaryComponent
-        v-for="(match, index) in matchesByDate"
-        :key="index"
-        :match="match"
-      ></SummaryComponent>
-
-      <hr />
-
-      <footer class="mt-2">
-        <h2>Explication :</h2>
+      <PageSectionComponent title="Explication">
         Le Grand Tournoi est un format inédit du traditionnel quizz de l'After
         Foot (animé par Julien Cazarre) sous forme de tableau de duels à
         élimination directe, commençant en 1/8e de finales. Il est instauré en
@@ -44,7 +43,7 @@
         Race au moment du début du Grand Tournoi, ainsi que 8 invités plus ou
         moins prestigieux, assignés de manière aléatoire. Chaque match se joue
         en 10 minutes.
-      </footer>
+      </PageSectionComponent>
     </div>
   </div>
 </template>
@@ -53,10 +52,12 @@
 import RoundComponent from "./components/RoundComponent";
 import { Match, Player, Round, Side } from "./types";
 import SummaryComponent from "./components/SummaryComponent";
+import PageSectionComponent from "./components/PageSectionComponent";
 
 export default {
   name: "App",
   components: {
+    PageSectionComponent,
     SummaryComponent,
     RoundComponent
   },
@@ -91,7 +92,13 @@ export default {
           new Date(2020, 3, 7),
           new Side(this.players.gbr, 6),
           new Side(this.players.max, 5),
-          "A priori l'une des affiches les plus déséquilibrée, le match démarre par un 2-0 du favori Gilbert Brisbois. Max revient à 2-1, mais la technique et l'experience de Gilbert vont porter le score à 4-1. Une certaine fébrilité s'empare de ce dernier lorsque Max marque son 2e but, et, sentant que le vent commence à tourner, il profitera non pas d'une mais de 2 erreurs de Gilbert pour revenir à 4 partout. Pris de panique, Gilbert répond à une question dans la règle mais pas dans l'esprit, profitant d'une faille du règlement en énumérant rapidement des réponses dans l'espoir de tomber juste par hasard, suscitant les huées du public. L'arbitre accorde le but mais prévient la tête de série que ce comportement ne sera plus toléré (appelée plus tard la jurisprudence Hénin-Beaumont). Gilbert retrouve un peu son jeu et passe la marque à 6-4, mais la rage de l'injustice donne la force à Max de réduire à nouveau l'écart. Sentant la fin du temps règlemtaire arriver, Gilbert met une énorme pression sur l'arbitre et perd du temps, ce qui fonctionnera puisque ce dernier arrêtera le match à 6-5 alors qu'une dernière action aurait pu être jouée. Max, dont on n'attendait rien, sort dès le premier tour mais par la grande porte, vainqueur moral de ce match d'ouverture. Gilbert, déjà accusé régulièrement d'être favorisé par le corps arbitral, ne redorera pas son image."
+          "A priori l'une des affiches les plus déséquilibrée, le match démarre par un 2-0 du favori Gilbert Brisbois. Max revient à 2-1, mais la technique et l'experience de Gilbert vont porter le score à 4-1." +
+            " Une certaine fébrilité s'empare de ce dernier lorsque Max marque son 2e but, et, sentant que le vent commence à tourner, il profitera non pas d'une mais de 2 erreurs de Gilbert pour revenir à 4 partout." +
+            " Pris de panique, Gilbert répond à une question dans la règle mais pas dans l'esprit, profitant d'une faille du règlement en énumérant rapidement des réponses dans l'espoir de tomber juste par hasard," +
+            " suscitant les huées du public. L'arbitre accorde le but mais prévient la tête de série que ce comportement ne sera plus toléré (appelée plus tard la jurisprudence Hénin-Beaumont)." +
+            " Gilbert retrouve un peu son jeu et passe la marque à 6-4, mais la rage de l'injustice donne la force à Max de réduire à nouveau l'écart. Sentant la fin du temps règlemtaire arriver," +
+            " Gilbert met une énorme pression sur l'arbitre et perd du temps, ce qui fonctionnera puisque ce dernier arrêtera le match à 6-5 alors qu'une dernière action aurait pu être jouée." +
+            " Max, dont on n'attendait rien, sort dès le premier tour mais par la grande porte, vainqueur moral de ce match d'ouverture. Gilbert, déjà accusé régulièrement d'être favorisé par le corps arbitral, ne redorera pas son image."
         ),
         new Match(
           16,
@@ -123,7 +130,7 @@ export default {
           new Date(2020, 3, 16),
           new Side(this.players.jro, 11),
           new Side(this.players.aro, 4),
-          "Ce huitième est marqué par le forfait de [[Nicolas Vilas]], remplacé au pied levé par Arthur Robert. Ce forfait est un coup dur pour les organisateurs du Grand Tournoi, l'affiche faisant normalement s'affronter l'un des invités les plus forts avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée. Qualification facile pour la patte gauche 11-4."
+          "Ce huitième est marqué par le forfait de Nicolas Vilas, remplacé au pied levé par Arthur Robert. Ce forfait est un coup dur pour les organisateurs du Grand Tournoi, l'affiche faisant normalement s'affronter l'un des invités les plus forts avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée. Qualification facile pour la patte gauche 11-4."
         ),
         new Match(
           16,

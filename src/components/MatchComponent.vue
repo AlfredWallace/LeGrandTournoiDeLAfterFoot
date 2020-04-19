@@ -1,24 +1,44 @@
 <template functional>
-  <table class="shadow-lg my-2 table-fixed font-mono">
-    <tbody>
-      <tr>
-        <td class="side-td">
-          {{ props.match.home.player.name }}
-        </td>
-        <td class="side-td result-td">
-          {{ props.match.home.score }}
-        </td>
-      </tr>
-      <tr>
-        <td class="side-td">
-          {{ props.match.away.player.name }}
-        </td>
-        <td class="side-td result-td">
-          {{ props.match.away.score }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div
+    class="shadow-lg my-2 table-fixed font-mono border border-solid rounded-lg border-collapse"
+  >
+    <table
+      class="w-full overflow-hidden border border-solid rounded-lg border-collapse"
+    >
+      <tbody>
+        <tr
+          :class="{
+            'bg-green-400': props.match.home.score > props.match.away.score
+          }"
+        >
+          <td class="side-td">
+            {{ props.match.home.player.name }}
+            <span v-if="props.match.home.player.rank" class="rank-pill">
+              {{ props.match.home.player.rank }}
+            </span>
+          </td>
+          <td class="side-td result-td">
+            {{ props.match.home.score }}
+          </td>
+        </tr>
+        <tr
+          :class="{
+            'bg-green-400': props.match.away.score > props.match.home.score
+          }"
+        >
+          <td class="side-td">
+            {{ props.match.away.player.name }}
+            <span v-if="props.match.away.player.rank" class="rank-pill">
+              {{ props.match.away.player.rank }}
+            </span>
+          </td>
+          <td class="side-td result-td">
+            {{ props.match.away.score }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -37,9 +57,12 @@ export default {
 
 <style scoped>
 .side-td {
-  @apply border border-solid rounded px-2 py-1;
+  @apply px-2 py-1;
 }
 .result-td {
   @apply w-1/6 text-right;
+}
+.rank-pill {
+  @apply text-xs border border-solid rounded-full py-1 px-2 bg-gray-100;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="flex flex-col">
     <h3>{{ round.title }}</h3>
-    <div class="flex flex-col justify-around h-full">
+    <div class="flex flex-col justify-around flex-grow">
       <MatchComponent
         v-for="(match, index) in round.matches"
         :key="index"
