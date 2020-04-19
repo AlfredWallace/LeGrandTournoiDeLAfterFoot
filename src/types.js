@@ -1,16 +1,14 @@
-export class Player {
-  constructor(firstName, lastName, rank) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.name = firstName + " " + lastName;
-    this.shortName = firstName.charAt(0) + ". " + lastName;
+export class Team {
+  constructor(name, shortName, rank) {
+    this.name = name;
+    this.shortName = shortName;
     this.rank = rank;
   }
 }
 
 export class Side {
-  constructor(player, score) {
-    this.player = player;
+  constructor(team, score) {
+    this.team = team;
     this.score = score;
   }
 }

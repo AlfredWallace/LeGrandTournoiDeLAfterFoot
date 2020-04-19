@@ -4,9 +4,9 @@
       {{ props.match.readableDate }}
     </div>
     <div class="text-center font-semibold mb-3">
-      {{ props.match.home.player.shortName }}
+      {{ props.match.home.team.shortName }}
       <span class="font-normal text-xs">vs.</span>
-      {{ props.match.away.player.shortName }}
+      {{ props.match.away.team.shortName }}
     </div>
     <p class="text-justify">
       {{ props.match.summary }}

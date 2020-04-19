@@ -10,9 +10,9 @@
           ]"
         >
           <td class="side-td">
-            {{ props.match.home.player.name }}
-            <span v-if="props.match.home.player.rank" class="rank-pill">
-              {{ props.match.home.player.rank }}
+            {{ props.match.home.team.name }}
+            <span v-if="props.match.home.team.rank" class="rank-pill">
+              {{ props.match.home.team.rank }}
             </span>
           </td>
           <td class="side-td result-td">
@@ -27,9 +27,9 @@
           ]"
         >
           <td class="side-td">
-            {{ props.match.away.player.name }}
-            <span v-if="props.match.away.player.rank" class="rank-pill">
-              {{ props.match.away.player.rank }}
+            {{ props.match.away.team.name }}
+            <span v-if="props.match.away.team.rank" class="rank-pill">
+              {{ props.match.away.team.rank }}
             </span>
           </td>
           <td class="side-td result-td">

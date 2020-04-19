@@ -70,7 +70,7 @@
 
 <script>
 import RoundComponent from "./components/RoundComponent";
-import { Match, Player, Round, Side } from "./types";
+import { Match, Team, Round, Side } from "./types";
 import SummaryComponent from "./components/SummaryComponent";
 import PageSectionComponent from "./components/PageSectionComponent";
 
@@ -83,23 +83,23 @@ export default {
   },
   data() {
     return {
-      players: {
-        gbr: new Player("Gilbert", "Brisbois", 1),
-        max: new Player("Max", "Dustendarre", null),
-        edm: new Player("Éric", "Di Meco", null),
-        kdi: new Player("Kévin", "Diaz", 8),
-        dpe: new Player("Damien", "Perrinelle", 5),
-        jth: new Player("Jérôme", "Thomas", null),
-        pdu: new Player("Pierre", "Ducrocq", null),
-        jmh: new Player("Jonathan", "MacHardy", 4),
-        jro: new Player("Jérôme", "Rothen", 3),
-        aro: new Player("Arthur", "Robert", null),
-        fpi: new Player("Frédéric", "Piquionne", null),
-        llp: new Player("Laure", "Lepailleur", 6),
-        nja: new Player("Nicolas", "Jamain", 7),
-        lch: new Player("Lionel", "Charbonnier", null),
-        pve: new Player("Paul", "Vexiau", null),
-        dri: new Player("Daniel", "Riolo", 2)
+      teams: {
+        gbr: new Team("Racing Club Brisbois", "Racing", 1),
+        max: new Team("Royal Standard de Max", "Standard", null),
+        edm: new Team("Olympique Di Meco", "OM", null),
+        kdi: new Team("Ajax Diazterdam", "Ajax", 8),
+        dpe: new Team("Perry Ned Bulls", "Ned Bulls", 5),
+        jth: new Team("Jérôme", "Thomas", null),
+        pdu: new Team("Pierre", "Ducrocq", null),
+        jmh: new Team("Jonathandan Godot FC", "Godot FC", 4),
+        jro: new Team("Paris Saint-Jérôme", "PSJ", 3),
+        aro: new Team("Arthur", "Robert", null),
+        fpi: new Team("Frédéric", "Piquionne", null),
+        llp: new Team("Laure", "Lepailleur", 6),
+        nja: new Team("Nicolas", "Jamain", 7),
+        lch: new Team("Inter Charbonara FC", "Inter", null),
+        pve: new Team("Paul", "Vexiau", null),
+        dri: new Team("Daniel", "Riolo", 2)
       }
     };
   },
@@ -110,8 +110,8 @@ export default {
           16,
           1,
           new Date(2020, 3, 7),
-          new Side(this.players.gbr, 6),
-          new Side(this.players.max, 5),
+          new Side(this.teams.gbr, 6),
+          new Side(this.teams.max, 5),
           "A priori l'une des affiches les plus déséquilibrée, le match démarre par un 2-0 du favori Gilbert Brisbois. Max revient à 2-1, mais la technique et l'experience de Gilbert vont porter le score à 4-1." +
             " Une certaine fébrilité s'empare de ce dernier lorsque Max marque son 2e but, et, sentant que le vent commence à tourner, il profitera non pas d'une mais de 2 erreurs de Gilbert pour revenir à 4 partout." +
             " Pris de panique, Gilbert répond à une question dans la règle mais pas dans l'esprit, profitant d'une faille du règlement en énumérant rapidement des réponses dans l'espoir de tomber juste par hasard," +
@@ -124,88 +124,88 @@ export default {
           16,
           2,
           new Date(2020, 3, 9),
-          new Side(this.players.edm, 4),
-          new Side(this.players.kdi, 7),
+          new Side(this.teams.edm, 4),
+          new Side(this.teams.kdi, 7),
           "Première grosse affiche de ces huitièmes de finale. D'un côté, Kèvin Diaz, huitième de la Race mais considéré par beaucoup d'observateurs comme ayant un niveau supérieur à son classement. De l'autre, Éric Di Meco, invité, mais premier d'une autre championnat, considéré par beaucoup d'observateurs comme une potentielle tête de série 1 bis. Mais, la vie nous réserve parfois des surprises, comme disait Brandao c'est comme la boîte à chocolat. En effet, le scénario de ce huitième touche du doigt l'irrationnalité pure. Kévin ouvre la marque, et Éric enchaîne sur un but contre son camp, 2-0. Certains disent que le visage de ce dernier au coup d'envoi n'annoncait rien de bon. On ne le saura jamais, mais ce dont on est sûr c'est que c'est ce moment là qu'il choisit pour perdre son football. Cauchemar devenu réalité, les minutes qui suivirent verront Kévin porter la marque à 7-0, dont un second CSC. Le monde entier est en état de stupeur, le match est plié. Mais, tout va très vite dans le football, et le haut niveau se joue souvent dans les têtes. À peine son premier but marqué pour revenir à 7-1, Éric se transforma en monstre d'efficacité et de précision et enchaîna 3 autres buts, 7-4 au tableau d'affichage. Malheureusement le réveil fut trop tardif, et c'est bien Kévin qui se qualifia, plutôt soulagé que le temps réglementaire arrive à son terme."
         ),
         new Match(
           16,
           3,
           new Date(2020, 3, 15),
-          new Side(this.players.dpe, 8),
-          new Side(this.players.jth, 7),
+          new Side(this.teams.dpe, 8),
+          new Side(this.teams.jth, 7),
           "Résumé à venir."
         ),
         new Match(
           16,
           4,
           new Date(2020, 3, 8),
-          new Side(this.players.pdu, 4),
-          new Side(this.players.jmh, 8),
+          new Side(this.teams.pdu, 4),
+          new Side(this.teams.jmh, 8),
           "Ce match fut marqué par l'une des pires premières périodes des huitièmes de finale, les 2 protagonistes ratant pratiquement toutes leurs occasions. Lors de la seconde, le niveau de jeu redevint acceptable, le favori Jonathan assumant son statut et dominant logiquement la rencontre. Un peu amer, Pierre eu quelques mots en fin de match, accusant son adversaire de tricherie, mais l'on vit bien qu'il n'en était pas lui-même convaincu. Victoire logique 8-4 de la tête de série numéro 4."
         ),
         new Match(
           16,
           5,
           new Date(2020, 3, 16),
-          new Side(this.players.jro, 11),
-          new Side(this.players.aro, 4),
+          new Side(this.teams.jro, 11),
+          new Side(this.teams.aro, 4),
           "Ce huitième est marqué par le forfait de Nicolas Vilas, remplacé au pied levé par Arthur Robert. Ce forfait est un coup dur pour les organisateurs du Grand Tournoi, l'affiche faisant normalement s'affronter l'un des invités les plus forts avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée. Qualification facile pour la patte gauche 11-4."
         ),
         new Match(
           16,
           6,
           new Date(2020, 3, 14),
-          new Side(this.players.fpi, 7),
-          new Side(this.players.llp, 9),
+          new Side(this.teams.fpi, 7),
+          new Side(this.teams.llp, 9),
           "Résumé à venir."
         ),
         new Match(
           16,
           7,
           new Date(2020, 3, 10),
-          new Side(this.players.nja, 10),
-          new Side(this.players.lch, 2),
-          "Résumé à venir."
+          new Side(this.teams.nja, 10),
+          new Side(this.teams.lch, 2),
+          "Entrée en lice de l'une des plus Lionel marque en 1er / egal direct /  2-1 / break 3-1 / remontée 3-2 accusation gain de temps / 4-2 / cavalier seul - déroulement 10-2 / diff physique"
         ),
         new Match(
           16,
           8,
           new Date(2020, 3, 13),
-          new Side(this.players.pve, 3),
-          new Side(this.players.dri, 9),
+          new Side(this.teams.pve, 3),
+          new Side(this.teams.dri, 9),
           "Résumé à venir."
         ),
         new Match(
           8,
           1,
           "",
-          new Side(this.players.gbr, null),
-          new Side(this.players.kdi, null),
+          new Side(this.teams.gbr, null),
+          new Side(this.teams.kdi, null),
           ""
         ),
         new Match(
           8,
           2,
           "",
-          new Side(this.players.dpe, null),
-          new Side(this.players.jmh, null),
+          new Side(this.teams.dpe, null),
+          new Side(this.teams.jmh, null),
           ""
         ),
         new Match(
           8,
           3,
           "",
-          new Side(this.players.jro, null),
-          new Side(this.players.llp, null),
+          new Side(this.teams.jro, null),
+          new Side(this.teams.llp, null),
           ""
         ),
         new Match(
           8,
           4,
           "",
-          new Side(this.players.nja, null),
-          new Side(this.players.dri, null),
+          new Side(this.teams.nja, null),
+          new Side(this.teams.dri, null),
           ""
         )
       ];
