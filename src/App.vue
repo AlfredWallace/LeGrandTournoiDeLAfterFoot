@@ -57,19 +57,19 @@ export default {
       teams: {
         gbr: new Team("RC Strasbrisbois", "Racing", 1),
         max: new Team("Royal Standard de Max", "Standard", null),
-        edm: new Team("Olympique Di Meco", "OM", null),
-        kdi: new Team("Ajax Diazterdam", "Ajax", 8),
+        edm: new Team("Olympique Di Meco", "ODM", null),
+        kdi: new Team("Layax Diazterdam", "Layax", 8),
         dpe: new Team("Perry Ned Bulls", "Ned Bulls", 5),
-        jth: new Team("Jérôme", "Thomas", null),
-        pdu: new Team("Pierre", "Ducrocq", null),
+        jth: new Team("Thomalke 04", "Thomalke", null),
+        pdu: new Team("Borussia Ducrocqmund", "Ducrocqmund", null),
         jmh: new Team("Jonathandan Godot FC", "Godot FC", 4),
-        jro: new Team("Paris Saint-Jérôme", "PSJ", 3),
-        aro: new Team("Arthur", "Robert", null),
-        fpi: new Team("Frédéric", "Piquionne", null),
-        llp: new Team("Laure", "Lepailleur", 6),
-        nja: new Team("Nicolas", "Jamain", 7),
+        jro: new Team("FC Patte Gauche", "FCPG", 3),
+        aro: new Team("Arthorino FC", "Arthorino", null),
+        fpi: new Team("FC Fredpiquionne", "Fredpa", null),
+        llp: new Team("Realor El Payor", "Real", 6),
+        nja: new Team("Paris Saint-Jamain", "PSJ", 7),
         lch: new Team("Inter Charbonara FC", "Inter", null),
-        pve: new Team("Paul", "Vexiau", null),
+        pve: new Team("Athletic Vexiao", "Vexiao", null),
         dri: new Team("AS Rioloma", "Rioloma", 2)
       }
     };
@@ -97,13 +97,13 @@ export default {
           new Date(2020, 3, 9),
           new Side(this.teams.edm, 4),
           new Side(this.teams.kdi, 7),
-          "Première grosse affiche de ces huitièmes de finale. D'un côté, L'Ajax Diazterdam, jeune équipe huitième de la Race mais très technique, et considérée par beaucoup d'observateurs comme ayant un niveau supérieur à son classement." +
+          "Première grosse affiche de ces huitièmes de finale. D'un côté, Layax Diazterdam, jeune équipe huitième de la Race mais très technique, et considérée par beaucoup d'observateurs comme ayant un niveau supérieur à son classement." +
             " De l'autre, L'Olympique Di Meco, invitée, mais premieère d'un autre championnat, considérée par ces mêmes observateurs comme une potentielle tête de série 1 bis." +
             " La vie nous réserve parfois des surprises, ainsi que disait Brandao : c'est comme la boîte à chocolat. En effet, le scénario de ce huitième touche du doigt l'irrationnalité pure." +
-            " L'Ajax ouvre la marque, et l'OM enchaîne par un but contre son camp, 2-0. Certains disent que les visages des olympiens au coup d'envoi n'annoncaient rien de bon. On ne le saura jamais," +
+            " Layax ouvre la marque, et l'ODM enchaîne par un but contre son camp, 2-0. Certains disent que les visages des olympiens au coup d'envoi n'annoncaient rien de bon. On ne le saura jamais," +
             " mais ce dont on est sûr c'est que c'est ce moment là qu'ils choisirent pour perdre leur football. Cauchemar devenu réalité, les minutes qui suivirent verront la fougue de la jeunesse porter la marque à 7-0," +
             " dont un second CSC. Le monde entier est en état de stupeur, le match est plié. Mais, tout va très vite dans le football, et le haut niveau se joue souvent dans les têtes. À peine son premier but marqué pour revenir à 7-1," +
-            " l'OM se transforma en monstre d'efficacité et de précision et enchaîna 3 autres buts. 7-4 au tableau d'affichage ! Malheureusement le réveil fut trop tardif, et c'est bien l'Ajax qui se qualifia," +
+            " l'ODM se transforma en monstre d'efficacité et de précision et enchaîna 3 autres buts. 7-4 au tableau d'affichage ! Malheureusement le réveil fut trop tardif, et c'est bien Layax qui se qualifia," +
             " plutôt soulagée que le temps réglementaire arriva à son terme."
         ),
         new Match(16, 3, new Date(2020, 3, 15), new Side(this.teams.dpe, 8), new Side(this.teams.jth, 7), "Résumé à venir."),
@@ -114,8 +114,8 @@ export default {
           new Side(this.teams.pdu, 4),
           new Side(this.teams.jmh, 8),
           "Ce match fut marqué par l'une des pires premières périodes des huitièmes de finale, les 2 protagonistes ratant pratiquement toutes leurs occasions, à tel point qu'il n'y a quasiment rien à en raconter." +
-            " Lors de la seconde, le niveau de jeu redevint acceptable, le favori Godot F.C. assumant son statut et dominant logiquement la rencontre, sans jamais vraiment l'emballer." +
-            " Un peu amer, Pierre eu quelques mots en fin de match, accusant son adversaire de tricherie, mais l'on vit bien qu'il n'en était pas lui-même convaincu. Victoire logique 8-4 de la tête de série numéro 4."
+            " Lors de la seconde, le niveau de jeu redevint acceptable, le favori Godot F.C. assumant son statut et dominant logiquement la rencontre, sans jamais vraiment l'emballer. Un peu amers, quelqes joueurs de Ducrocqmund" +
+            " eurent quelques mots en fin de match, accusant leur adversaire de tricherie, mais l'on vit bien qu'ils n'en étaient pas eux-mêmes convaincus. Victoire logique 8-4 de la tête de série numéro 4."
         ),
         new Match(
           16,
@@ -123,9 +123,9 @@ export default {
           new Date(2020, 3, 16),
           new Side(this.teams.jro, 11),
           new Side(this.teams.aro, 4),
-          "Ce huitième est marqué par le forfait de Nicolas Vilas, remplacé au pied levé par Arthur Robert. Ce forfait est un coup dur pour les organisateurs du Grand Tournoi," +
-            " l'affiche faisant normalement s'affronter l'un des invités les plus forts avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée." +
-            " Qualification facile pour la patte gauche 11-4."
+          "Ce huitième est marqué par le forfait du Benfica Porto Vilas, malheureusement trop atteints par le virus. Remplacée au pied levé par le Arthorino FC, ce forfait est un coup dur pour les organisateurs du Grand Tournoi," +
+            " l'affiche faisant normalement s'affronter l'une des équipes invitées les plus fortes avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée." +
+            " Qualification tranquille et méritée pour la patte gauche, 11-4."
         ),
         new Match(16, 6, new Date(2020, 3, 14), new Side(this.teams.fpi, 7), new Side(this.teams.llp, 9), "Résumé à venir."),
         new Match(
@@ -134,7 +134,11 @@ export default {
           new Date(2020, 3, 10),
           new Side(this.teams.nja, 10),
           new Side(this.teams.lch, 2),
-          "Entrée en lice de l'une des plus Lionel marque en 1er / egal direct /  2-1 / break 3-1 / remontée 3-2 accusation gain de temps / 4-2 / cavalier seul - déroulement 10-2 / diff physique"
+          "Entrée en lice de l'une des plus faibles équipes, l'Inter Charbonara. Contre toute attente ils ouvrent le score très rapidement dans le match. Eux-mêmes surpris par l'improbable scénario, il se rendront coupables" +
+            " d'un manque de concentration, permettant au PSJ d'égaliser dès l'engagement. De nouveau à égalité, le favori reprend les commandes du match et commence à dérouler, 2-1, puis 3-1. Le matche entre alors dans un faux-rythme," +
+            " les interistes profitentant à leur tour d'une faute d'inattention pour revenir à 3-2. La première période se termine en passe à dix entre les joueurs du Paris Saint-Jamain. Au retour des vestiaires, dont les murs auraient " +
+            " tremblés, ils reviennent clairement avec d'autres ambitions. L'Inter finit par craquer, 4-2. L'ascendant psychologique étant définitivement acquis, et la différence physique venant s'y ajouter, on assiste alors" +
+            " à un véritable cavalier seul jusqu'à la fin du match qui se terminera sur le score fleuve de 10 à 2."
         ),
         new Match(16, 8, new Date(2020, 3, 13), new Side(this.teams.pve, 3), new Side(this.teams.dri, 9), "Résumé à venir."),
         new Match(8, 1, "", new Side(this.teams.gbr, null), new Side(this.teams.kdi, null), ""),
