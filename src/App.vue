@@ -1,8 +1,6 @@
 <template>
   <div class="font-sans text-gray-700">
-    <div
-      class="text-center align-middle shadow-lg fixed w-screen bg-white py-1"
-    >
+    <div class="text-center align-middle shadow-lg fixed w-screen bg-white py-1">
       <h1 class="text-xl md:text-2xl xl:text-3xl font-bold">
         Le Grand Tournoi de l'After Foot
       </h1>
@@ -10,46 +8,30 @@
     <div class="container mx-auto px-2 md:pt-2 xl:pt-4">
       <PageSectionComponent title="Tableau">
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-          <RoundComponent
-            v-for="(round, index) in rounds"
-            :round="round"
-            :key="index"
-          >
-          </RoundComponent>
+          <RoundComponent v-for="(round, index) in rounds" :round="round" :key="index"> </RoundComponent>
         </div>
       </PageSectionComponent>
 
       <PageSectionComponent title="Déroulé de la compétition">
         <div class="grid grid-cols-1 gap-6">
-          <SummaryComponent
-            v-for="(match, index) in matchesByDate"
-            :key="index"
-            :match="match"
-          ></SummaryComponent>
+          <SummaryComponent v-for="(match, index) in matchesByDate" :key="index" :match="match"></SummaryComponent>
         </div>
       </PageSectionComponent>
 
       <PageSectionComponent title="Contexte">
         <div class="p-2 border border-solid shadow-md">
           <p class="my-2">
-            Le Grand Tournoi est un format inédit du traditionnel quizz de
-            l'After Foot (animé par Julien Cazarre) sous forme de tableau à
-            élimination directe, commençant en 1/8e de finales. Il est instauré
-            en 2020 suite au confinement national français dû à l'épidémie de
-            Covid-19.
+            Le Grand Tournoi est un format inédit du traditionnel quizz de l'<a href="https://fr.wikipedia.org/wiki/After_Foot" target="_blank">After Foot</a> (animé par
+            <a href="https://fr.wikipedia.org/wiki/Julien_Cazarre" target="_blank">Julien Cazarre</a>) sous forme de tableau à élimination directe, commençant en 1/8e de
+            finales. Il est instauré en 2020 suite au confinement national français dû à l'épidémie de Covid-19.
           </p>
           <p class="mb-2">
-            L'adoption de ce format à élimination est justifiée par le besoin de
-            raccourcir la saison et la terminer à tout prix, les pertes des
-            droits TV et des contrats de sponsoring pouvant mettre en danger la
-            santé financière des participants.
+            L'adoption de ce format à élimination est justifiée par le besoin de raccourcir la saison et la terminer à tout prix, les pertes des droits TV et des contrats
+            de sponsoring pouvant mettre en danger la santé financière des participants.
           </p>
           <p>
-            Le tournoi verra s'affronter 8 équipes habituelles du quizz,
-            classées selon leur position dans le championnat au moment du début
-            du Grand Tournoi, ainsi que 8 équipes invitées plus ou moins
-            prestigieuses, assignées de manière aléatoire. Chaque match se joue
-            en 10 minutes.
+            Le tournoi verra s'affronter 8 équipes habituelles du quizz, classées selon leur position dans le championnat au moment du début du Grand Tournoi, ainsi que 8
+            équipes invitées plus ou moins prestigieuses, assignées de manière aléatoire. Chaque match se joue en 10 minutes.
           </p>
         </div>
       </PageSectionComponent>
@@ -124,14 +106,7 @@ export default {
             " l'OM se transforma en monstre d'efficacité et de précision et enchaîna 3 autres buts. 7-4 au tableau d'affichage ! Malheureusement le réveil fut trop tardif, et c'est bien l'Ajax qui se qualifia," +
             " plutôt soulagée que le temps réglementaire arriva à son terme."
         ),
-        new Match(
-          16,
-          3,
-          new Date(2020, 3, 15),
-          new Side(this.teams.dpe, 8),
-          new Side(this.teams.jth, 7),
-          "Résumé à venir."
-        ),
+        new Match(16, 3, new Date(2020, 3, 15), new Side(this.teams.dpe, 8), new Side(this.teams.jth, 7), "Résumé à venir."),
         new Match(
           16,
           4,
@@ -152,14 +127,7 @@ export default {
             " l'affiche faisant normalement s'affronter l'un des invités les plus forts avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée." +
             " Qualification facile pour la patte gauche 11-4."
         ),
-        new Match(
-          16,
-          6,
-          new Date(2020, 3, 14),
-          new Side(this.teams.fpi, 7),
-          new Side(this.teams.llp, 9),
-          "Résumé à venir."
-        ),
+        new Match(16, 6, new Date(2020, 3, 14), new Side(this.teams.fpi, 7), new Side(this.teams.llp, 9), "Résumé à venir."),
         new Match(
           16,
           7,
@@ -168,62 +136,17 @@ export default {
           new Side(this.teams.lch, 2),
           "Entrée en lice de l'une des plus Lionel marque en 1er / egal direct /  2-1 / break 3-1 / remontée 3-2 accusation gain de temps / 4-2 / cavalier seul - déroulement 10-2 / diff physique"
         ),
-        new Match(
-          16,
-          8,
-          new Date(2020, 3, 13),
-          new Side(this.teams.pve, 3),
-          new Side(this.teams.dri, 9),
-          "Résumé à venir."
-        ),
-        new Match(
-          8,
-          1,
-          "",
-          new Side(this.teams.gbr, null),
-          new Side(this.teams.kdi, null),
-          ""
-        ),
-        new Match(
-          8,
-          2,
-          "",
-          new Side(this.teams.dpe, null),
-          new Side(this.teams.jmh, null),
-          ""
-        ),
-        new Match(
-          8,
-          3,
-          "",
-          new Side(this.teams.jro, null),
-          new Side(this.teams.llp, null),
-          ""
-        ),
-        new Match(
-          8,
-          4,
-          "",
-          new Side(this.teams.nja, null),
-          new Side(this.teams.dri, null),
-          ""
-        )
+        new Match(16, 8, new Date(2020, 3, 13), new Side(this.teams.pve, 3), new Side(this.teams.dri, 9), "Résumé à venir."),
+        new Match(8, 1, "", new Side(this.teams.gbr, null), new Side(this.teams.kdi, null), ""),
+        new Match(8, 2, "", new Side(this.teams.dpe, null), new Side(this.teams.jmh, null), ""),
+        new Match(8, 3, "", new Side(this.teams.jro, null), new Side(this.teams.llp, null), ""),
+        new Match(8, 4, "", new Side(this.teams.nja, null), new Side(this.teams.dri, null), "")
       ];
     },
     rounds() {
       return [
-        new Round(
-          "Huitièmes",
-          this.sortMatchesByOrder(
-            this.matches.filter(match => match.round === 16)
-          )
-        ),
-        new Round(
-          "Quarts",
-          this.sortMatchesByOrder(
-            this.matches.filter(match => match.round === 8)
-          )
-        )
+        new Round("Huitièmes", this.sortMatchesByOrder(this.matches.filter(match => match.round === 16))),
+        new Round("Quarts", this.sortMatchesByOrder(this.matches.filter(match => match.round === 8)))
       ];
     },
     matchesByDate() {
@@ -235,10 +158,14 @@ export default {
   },
   methods: {
     sortMatchesByOrder(matches) {
-      return matches
-        .slice()
-        .sort((matchA, matchB) => matchA.order - matchB.order);
+      return matches.slice().sort((matchA, matchB) => matchA.order - matchB.order);
     }
   }
 };
 </script>
+
+<style scoped>
+a {
+  @apply underline;
+}
+</style>
