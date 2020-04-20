@@ -123,7 +123,7 @@ export default {
           new Date(2020, 3, 16),
           new Side(this.teams.jro, 11),
           new Side(this.teams.aro, 4),
-          "Ce huitième est marqué par le forfait du Benfica Porto Vilas, malheureusement trop atteints par le virus. Remplacée au pied levé par le Arthorino FC, ce forfait est un coup dur pour les organisateurs du Grand Tournoi," +
+          "Ce huitième est marqué par le forfait du Benfica Porto Vilas, les joueurs étant malheureusement trop atteints par le virus. Remplacés au pied levé par le Arthorino FC, ce forfait est un coup dur pour les organisateurs du Grand Tournoi," +
             " l'affiche faisant normalement s'affronter l'une des équipes invitées les plus fortes avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée." +
             " Qualification tranquille et méritée pour la patte gauche, 11-4."
         ),
