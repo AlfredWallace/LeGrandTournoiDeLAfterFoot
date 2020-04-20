@@ -2,13 +2,7 @@
   <div class="shadow-md my-2 table-fixed font-mono border border-solid">
     <table class="w-full overflow-hidden">
       <tbody>
-        <tr
-          :class="[
-            props.match.home.score > props.match.away.score
-              ? 'bg-green-200 font-semibold'
-              : 'text-gray-600'
-          ]"
-        >
+        <tr :class="[props.match.home.score > props.match.away.score ? 'bg-green-200 font-semibold' : 'text-gray-600']">
           <td class="side-td">
             {{ props.match.home.team.name }}
             <span v-if="props.match.home.team.rank" class="rank-pill">
@@ -19,13 +13,7 @@
             {{ props.match.home.score }}
           </td>
         </tr>
-        <tr
-          :class="[
-            props.match.away.score > props.match.home.score
-              ? 'bg-green-200 font-semibold'
-              : 'text-gray-600'
-          ]"
-        >
+        <tr :class="[props.match.away.score > props.match.home.score ? 'bg-green-200 font-semibold' : 'text-gray-600']">
           <td class="side-td">
             {{ props.match.away.team.name }}
             <span v-if="props.match.away.team.rank" class="rank-pill">

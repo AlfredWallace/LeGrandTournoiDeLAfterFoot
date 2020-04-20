@@ -4,11 +4,7 @@
       {{ round.title }}
     </h3>
     <div class="flex flex-col justify-around flex-grow">
-      <MatchComponent
-        v-for="(match, index) in round.matches"
-        :key="index"
-        :match="match"
-      ></MatchComponent>
+      <MatchComponent v-for="(match, index) in round.matches" :key="index" :match="match"></MatchComponent>
     </div>
   </div>
 </template>
