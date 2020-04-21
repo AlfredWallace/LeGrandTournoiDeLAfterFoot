@@ -158,9 +158,16 @@ export default {
           new Date(2020, 3, 20),
           new Side(this.teams.gbr, 9),
           new Side(this.teams.kdi, 8),
-          "Ouverture de Layax 0-1 / 0-2 / 0-3 / début en fanfare / 0-4 incroyable / réduction 1-4 / réveil  2-4 /  se rendent coup sur coup 2-5 / arbitrage limite 3-5 / confusion générale 4-5 / continuent l'offensive 4-6" +
-            " 5-6 / le public a pris fait et cause pour Layax mais but acordé 6-6 / Layax sent que ça tourne se plaint à l'arbitre, l'arbitre s'énerve /  6-7 Ayax pensent avoir un avantage décisif si près de la fin " +
-            "/ fin de match de folie mitraillage de buts 7-7 puis 7-8 puis 8-8 / victoire dans les arrêts de jeu 9-8 "
+          "Premier quart de finale, entre la tête de série et la sensation fraîcheur du moment. Portés par leur démonstration en huitièmes et leur attaque de feu, les joueurs de Layax cueillent à froid les strasbrisbois." +
+            " But dès les premières secondes, but sur l'engagement suivant, le ton est donné. K.O. debout, le Racing essaie de contenir les vagues, mais rien n'y fait, la marque va s'alourdir à 3-0 puis 4-0 ! L'écart est conséquent alors que" +
+            " nous ne sommes même pas à la mi-temps. L'entraîneur strasbrisbois décide de changer totalement de tactique et de prendre Layax à son jeu : tout pour l'attaque. Et ça marche ! Son équipe marque 1 puis 2 buts, mais en concède un autre," +
+            " ce qui porte la marque à 5-2. S'en suit un pénalty litigieux accordé au RCS, qui le marque, puis, la frustration faisant commettre une faute grossière aux joueurs de Layax, joue un coup franc rapidement dans la confusion et " +
+            " revient à 5-4 ! Les deux équipes continuent d'attaquer sans réserves, mais le Racing marque pratiquement 2 buts pour chaque qu'il concède, et revient à hauteur : 6 partout ! La foule est en délire mais a clairement pris fait et cause" +
+            " pour la jeunesse de Layax. À ce moment du match, les deux équipes, voyant le chrono arriver à son terme, n'osent plus prendre de risques et attendent la prolongation, qui aura bien lieu. Malgré la fatigue, cette dernière commence" +
+            " tambour battant. Le rythme ne baisse pas, mais les espaces s'agrandissent. Layax marque. 7-6. Le Racing revient. 7-7. Layax reprend l'avantage. 8-7. Le Racing re-revient. 8-8. L'équilibre de ce match est totalement instable." +
+            " Le chrono tourne, tourne, et la séance de tirs au but arrive à grands pas. Mais un favori n'est pas favori pour rien, et sur la dernière action du match, le dernier corner, la dernière tête, le RCS marque, et" +
+            " envoie un message au reste du monde : voilà ce qu'est un champion. C'est bien sûr cruel pour ces jeunes joueurs flamboyants de Layax, qui n'auront été menés au score que 30 secondes, mais ce sont les seules qui comptent." +
+            " Une nouvelle fois, le Racing gagne d'un petit point, une nouvelle fois, sa victoire agitera les gazettes, mais une nouvelle fois, le Racing est au tour suivant."
         ),
         new Match(8, 2, "", new Side(this.teams.dpe, null), new Side(this.teams.jmh, null), ""),
         new Match(8, 3, "", new Side(this.teams.jro, null), new Side(this.teams.llp, null), ""),
