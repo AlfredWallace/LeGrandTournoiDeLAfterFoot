@@ -123,9 +123,9 @@ export default {
           new Date(2020, 3, 16),
           new Side(this.teams.jro, 11),
           new Side(this.teams.aro, 4),
-          "Ce huitième est marqué par le forfait du Benfica Porto Vilas, les joueurs étant malheureusement trop atteints par le virus. Remplacés au pied levé par le Arthorino FC, ce forfait est un coup dur pour les organisateurs du Grand Tournoi," +
+          "Ce huitième est entaché par le forfait du Benfica Porto Vilas, les joueurs étant malheureusement trop atteints par le virus. Remplacés au pied levé par l'Arthorino FC, c'est un coup dur pour les organisateurs du Grand Tournoi," +
             " l'affiche faisant normalement s'affronter l'une des équipes invitées les plus fortes avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée." +
-            " Qualification tranquille et méritée pour la patte gauche, 11-4."
+            " Qualification tranquille et méritée pour la Patte Gauche, 11-4."
         ),
         new Match(16, 6, new Date(2020, 3, 14), new Side(this.teams.fpi, 7), new Side(this.teams.llp, 9), "Résumé à venir."),
         new Match(
@@ -140,7 +140,18 @@ export default {
             " tremblés, ils reviennent clairement avec d'autres ambitions. L'Inter finit par craquer, 4-2. L'ascendant psychologique étant définitivement acquis, et la différence physique venant s'y ajouter, on assiste alors" +
             " à un véritable cavalier seul jusqu'à la fin du match qui se terminera sur le score fleuve de 10 à 2."
         ),
-        new Match(16, 8, new Date(2020, 3, 13), new Side(this.teams.pve, 3), new Side(this.teams.dri, 9), "Résumé à venir."),
+        new Match(
+          16,
+          8,
+          new Date(2020, 3, 13),
+          new Side(this.teams.pve, 3),
+          new Side(this.teams.dri, 9),
+          "Encore une affiche déséquilibrée pour ce huitième de finale. L'AS Rioloma, bien que favorite, met la pression sur l'arbitre dès la conférence de presse d'avant-match. Peut-être échaudée par la victoire limite du Racing" +
+            " et l'élimination choc de l'ODM ? Le match début encore une fois par l'ouverture du score de l'outsider. Mais la joie des joueurs de Vexiao est de courte durée. En effet, les rioliens vont coup sur coup : égaliser, " +
+            "manquer une occasion énorme, prendre l'avantage, et marquer à nouveau en jouant un coup franc rapidement, ce qui nous amène à 3-1 au tableau d'affichage. La différence de niveau est criante. De plus, la Rioloma va aggraver" +
+            " le score aux meilleurs moments : juste avant la pause, et juste au retour des vestaires. Le score est alors de 5 à 1, et l'espoir n'est plus permis, même si quelques erreurs de concentration vont permettre au Vexiao FC " +
+            " de faire gonfler un peu leurs statistiques, jusqu'à 6-3. La fin de matche sera à sens unique pour l'AS Rioloma qui se qualifie logiquement 9 à 3."
+        ),
         new Match(8, 1, "", new Side(this.teams.gbr, null), new Side(this.teams.kdi, null), ""),
         new Match(8, 2, "", new Side(this.teams.dpe, null), new Side(this.teams.jmh, null), ""),
         new Match(8, 3, "", new Side(this.teams.jro, null), new Side(this.teams.llp, null), ""),
