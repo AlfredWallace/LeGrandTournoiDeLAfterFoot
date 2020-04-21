@@ -106,7 +106,17 @@ export default {
             " l'ODM se transforma en monstre d'efficacité et de précision et enchaîna 3 autres buts. 7-4 au tableau d'affichage ! Malheureusement le réveil fut trop tardif, et c'est bien Layax qui se qualifia," +
             " plutôt soulagée que le temps réglementaire arriva à son terme."
         ),
-        new Match(16, 3, new Date(2020, 3, 15), new Side(this.teams.dpe, 8), new Side(this.teams.jth, 7), "Résumé à venir."),
+        new Match(
+          16,
+          3,
+          new Date(2020, 3, 15),
+          new Side(this.teams.dpe, 8),
+          new Side(this.teams.jth, 7),
+          "Rencontre équilibrée à la fois sur le papier et a posteriori. Ni décevant ni emballant, le match fut tout de même de bonne facture. Il avait d'ailleurs commencé avant le coup d'envoi, par une séance amusante de trash-talk" +
+            " des Ned Bulls, fidèles à leur culture américaine. Aucune surprise donc, ces derniers faisant la course en tête durant quasiment l'intégralité de la rencontre, se faisant tout de même rejoindre de temps en temps, mais plus par" +
+            " manque de chance que de maîtrise. Même lors du retour de Thomalke de 6-3 à 6-6, on ne les sentait pas en réel danger, ce qui se confirma par suite (avec une petite frayeur de fin de match tout de même). À noter un magnifique" +
+            " coup franc de 40m pour le 2-1. Victoire logique 8-7, le score étant un peu flatteur pour les joueurs de Thomalke."
+        ),
         new Match(
           16,
           4,
