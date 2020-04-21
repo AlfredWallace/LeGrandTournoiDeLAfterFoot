@@ -65,7 +65,7 @@ export default {
         jmh: new Team("Jonathandan Godot FC", "Godot FC", 4),
         jro: new Team("FC Patte Gauche", "FCPG", 3),
         aro: new Team("Arthorino FC", "Arthorino", null),
-        fpi: new Team("FC Fredpiquionne", "Fredpa", null),
+        fpi: new Team("AS Piqui Paqua", "Paqua", null),
         llp: new Team("Realor El Payor", "Real", 6),
         nja: new Team("Paris Saint-Jamain", "PSJ", 7),
         lch: new Team("Inter Charbonara FC", "Inter", null),
@@ -137,7 +137,24 @@ export default {
             " l'affiche faisant normalement s'affronter l'une des équipes invitées les plus fortes avec la tête de série numéro 3. Le match fut décevant, la différence de niveau entre les protagonistes étant trop élevée." +
             " Qualification tranquille et méritée pour la Patte Gauche, 11-4."
         ),
-        new Match(16, 6, new Date(2020, 3, 14), new Side(this.teams.fpi, 7), new Side(this.teams.llp, 9), "Résumé à venir."),
+        new Match(
+          16,
+          6,
+          new Date(2020, 3, 14),
+          new Side(this.teams.fpi, 7),
+          new Side(this.teams.llp, 9),
+          "Affiche prometteuse pour les connaisseurs, pas de favoris pour la victoire finale, mais des niveaux équivalents, et des styles différents. Le match démarre sur un petit rythme, les équipes sont frileuses," +
+            " et la situation a du mal à se débloquer. Il faudra une erreur incroyable et un csc du Paqua sur une action peu dangereuse du Realor pour ouvrir le score. La rencontre s'emballe alors. Deux magnifiques actions collectives " +
+            " vont remettre le Paqua devant à 2-1, mais une tête rageuse de la star payoraise sur le corner suivant remet les équipes à égalité. Les piquistes remettent le pied sur le ballon, et d'une passe éliminant 2 lignes passent à nouveau" +
+            " en tête. Le Realor décide de se faire respecter en infligeant un pressing monstre, et marque coup sur coup à nouveau sur corner, puis sur un coup franc juste devant la surface. 3-4. Nouvelles séquences de jeu collectif du Paqua," +
+            " décidé à imposer son jeu, moment de folie avec 4 occasions dont 2 au fond : 5-4. Les payorais persistent eux aussi dans leur tactique et le physique commence à se faire sentir. But en puissance des 30m, 5-5, contre assassin, 5-6," +
+            " et une nouvelle tête sur corner du leader qui pour la première fois du match permet à une équipe de mener par plus d'un but d'écart ! Le break est fait, 5-7 pour le Realor. Il ne sera pas dit ici que cette équipe ne joue qu'avec" +
+            " la force : sur un nouveau coup france obtenu grâce au pressing, une fraction de seconde d'inattention suffit à passer la balle à celui qui s'était fait oublier, et qui n'a plus qu'à la pousser au fond des filets, double break 5-8 !" +
+            " À partir de maintenant, les payorais attendent en bloc et les piquistes assiègent leur camp. La défense paraît impénétrable, mais la qualité des passes est à ce moment là stratosphérique, les occasions s'empilent, mais pas seulement !" +
+            " Un premier but pour réduire l'écart. Un autre. 6-8. Le chrono tourne mais le match n'est pas arrivé à son terme. La panique gagne le Realor, c'est dans ces moments là que les erreurs arrivent, ce qui profite à nouveau à l'adversaire," +
+            " encore un but, 7-8, incroyable ! Mais tous les risques pris pour essayer de revnir avant que l'arbitre siffle la fin de la rencontre vont s'avérer fatals : un contre payorais, joué à moitié pour gagner du temps," +
+            " scellera le sort de la rencontre par un second csc ! Quelle fin de match. Les spectateurs en auront eu pour leur argent."
+        ),
         new Match(
           16,
           7,
@@ -180,7 +197,17 @@ export default {
             " Une nouvelle fois, le Racing gagne d'un petit point, une nouvelle fois, sa victoire agitera les gazettes, mais une nouvelle fois, le Racing est au tour suivant."
         ),
         new Match(8, 2, "", new Side(this.teams.dpe, null), new Side(this.teams.jmh, null), ""),
-        new Match(8, 3, "", new Side(this.teams.jro, null), new Side(this.teams.llp, null), ""),
+        new Match(
+          8,
+          3,
+          new Date(2020, 3, 21),
+          new Side(this.teams.jro, 8),
+          new Side(this.teams.llp, 4),
+          "Quart de finale déséquilibré, mais pas tant que ça. Évidemment, le FC Patte Gauche est favori, mais le niveau commence à s'homogénéiser. Et pour faire honneur à ce qui est devenu la marque de fabrique de ce Grand Tournoi :" +
+            " ouverture du score de l'outsider ! Sur un but gag en plus. Malheureusement pour le Realor, ça ne va pas suffire à déstabiliser la Patte Gauche, qui va imposer sa loi et dominer la majorité de la rencontre. Après avoir égalisé," +
+            " les gauchers vont empiler les buts pour mener jusqu'à 5 à 1. Puis, gérant leur avance, vont concéder quelques buts, mais continuer à en marquer, le match se terminant sur un score assez logique de 8 à 4. Fait notable tout de même :" +
+            " un but refusé aux payorais sur hors-jeu en plein milieu du match, est finalement accordé à la VAR en toute fin de rencontre, ce qui en fait l'arbitrage avec le retour en arrière le plus lointain jamais effectué."
+        ),
         new Match(8, 4, "", new Side(this.teams.nja, null), new Side(this.teams.dri, null), "")
       ];
     },
