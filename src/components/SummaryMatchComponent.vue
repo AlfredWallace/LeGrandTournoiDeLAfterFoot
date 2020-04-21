@@ -1,5 +1,5 @@
 <template functional>
-  <div class="shadow-md p-2 border border-solid">
+  <div class="shadow-md p-2 mb-2 border border-solid">
     <div class="text-center text-xs">
       {{ props.match.readableDate }}
     </div>
@@ -18,7 +18,7 @@
 import { Match } from "../types";
 
 export default {
-  name: "SummaryComponent",
+  name: "SummaryMatchComponent",
   props: {
     match: {
       type: Match,

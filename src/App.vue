@@ -8,13 +8,13 @@
     <div class="container mx-auto px-2 md:pt-2 xl:pt-4">
       <PageSectionComponent title="Tableau">
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-          <RoundComponent v-for="(round, index) in rounds" :round="round" :key="index"> </RoundComponent>
+          <BracketRoundComponent v-for="(round, index) in rounds" :round="round" :key="index"> </BracketRoundComponent>
         </div>
       </PageSectionComponent>
 
       <PageSectionComponent title="Déroulé de la compétition">
         <div class="grid grid-cols-1 gap-6">
-          <SummaryComponent v-for="(match, index) in matchesByDate" :key="index" :match="match"></SummaryComponent>
+          <SummaryRoundComponent v-for="(round, index) in rounds" :round="round" :key="index"></SummaryRoundComponent>
         </div>
       </PageSectionComponent>
 
@@ -40,17 +40,17 @@
 </template>
 
 <script>
-import RoundComponent from "./components/RoundComponent";
+import BracketRoundComponent from "./components/BracketRoundComponent";
 import { Match, Team, Round, Side } from "./types";
-import SummaryComponent from "./components/SummaryComponent";
 import PageSectionComponent from "./components/PageSectionComponent";
+import SummaryRoundComponent from "./components/SummaryRoundComponent";
 
 export default {
   name: "App",
   components: {
+    SummaryRoundComponent,
     PageSectionComponent,
-    SummaryComponent,
-    RoundComponent
+    BracketRoundComponent
   },
   data() {
     return {
@@ -152,7 +152,16 @@ export default {
             " le score aux meilleurs moments : juste avant la pause, et juste au retour des vestaires. Le score est alors de 5 à 1, et l'espoir n'est plus permis, même si quelques erreurs de concentration vont permettre au Vexiao FC " +
             " de faire gonfler un peu leurs statistiques, jusqu'à 6-3. La fin de matche sera à sens unique pour l'AS Rioloma qui se qualifie logiquement 9 à 3."
         ),
-        new Match(8, 1, "", new Side(this.teams.gbr, null), new Side(this.teams.kdi, null), ""),
+        new Match(
+          8,
+          1,
+          new Date(2020, 3, 20),
+          new Side(this.teams.gbr, 9),
+          new Side(this.teams.kdi, 8),
+          "Ouverture de Layax 0-1 / 0-2 / 0-3 / début en fanfare / 0-4 incroyable / réduction 1-4 / réveil  2-4 /  se rendent coup sur coup 2-5 / arbitrage limite 3-5 / confusion générale 4-5 / continuent l'offensive 4-6" +
+            " 5-6 / le public a pris fait et cause pour Layax mais but acordé 6-6 / Layax sent que ça tourne se plaint à l'arbitre, l'arbitre s'énerve /  6-7 Ayax pensent avoir un avantage décisif si près de la fin " +
+            "/ fin de match de folie mitraillage de buts 7-7 puis 7-8 puis 8-8 / victoire dans les arrêts de jeu 9-8 "
+        ),
         new Match(8, 2, "", new Side(this.teams.dpe, null), new Side(this.teams.jmh, null), ""),
         new Match(8, 3, "", new Side(this.teams.jro, null), new Side(this.teams.llp, null), ""),
         new Match(8, 4, "", new Side(this.teams.nja, null), new Side(this.teams.dri, null), "")
@@ -160,20 +169,23 @@ export default {
     },
     rounds() {
       return [
-        new Round("Huitièmes", this.sortMatchesByOrder(this.matches.filter(match => match.round === 16))),
-        new Round("Quarts", this.sortMatchesByOrder(this.matches.filter(match => match.round === 8)))
+        new Round(
+          "Huitièmes",
+          this.matches.filter(match => match.round === 16)
+        ),
+        new Round(
+          "Quarts",
+          this.matches.filter(match => match.round === 8)
+        ),
+        new Round(
+          "Demies",
+          this.matches.filter(match => match.round === 4)
+        ),
+        new Round(
+          "Finale",
+          this.matches.filter(match => match.round === 2)
+        )
       ];
-    },
-    matchesByDate() {
-      return this.matches
-        .filter(match => match.summary && match.date)
-        .slice()
-        .sort((matchA, matchB) => matchA.date - matchB.date);
-    }
-  },
-  methods: {
-    sortMatchesByOrder(matches) {
-      return matches.slice().sort((matchA, matchB) => matchA.order - matchB.order);
     }
   }
 };

@@ -33,7 +33,7 @@
 import { Match } from "../types";
 
 export default {
-  name: "MatchComponent",
+  name: "BracketMatchComponent",
   props: {
     match: {
       type: Match,
