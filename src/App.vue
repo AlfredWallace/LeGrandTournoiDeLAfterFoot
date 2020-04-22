@@ -208,7 +208,10 @@ export default {
             " les gauchers vont empiler les buts pour mener jusqu'à 5 à 1. Puis, gérant leur avance, vont concéder quelques buts, mais continuer à en marquer, le match se terminant sur un score assez logique de 8 à 4. Fait notable tout de même :" +
             " un but refusé aux payorais sur hors-jeu en plein milieu du match, est finalement accordé à la VAR en toute fin de rencontre, ce qui en fait l'arbitrage avec le retour en arrière le plus lointain jamais effectué."
         ),
-        new Match(8, 4, "", new Side(this.teams.nja, null), new Side(this.teams.dri, null), "")
+        new Match(8, 4, new Date(2020, 3, 23), new Side(this.teams.nja, null), new Side(this.teams.dri, null), ""), // petit joueur - a préparé meédiatiquement son élimination
+        new Match(4, 1, null, new Side(this.teams.gbr, null), new Side(this.teams.jmh, null), ""),
+        new Match(4, 2, null, new Side(this.teams.jro, null), null, ""),
+        new Match(2, 1, null, null, null, "")
       ];
     },
     rounds() {

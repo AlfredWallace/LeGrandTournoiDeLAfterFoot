@@ -1,29 +1,9 @@
-<template functional>
+<template>
   <div class="shadow-md my-2 table-fixed font-mono border border-solid">
     <table class="w-full overflow-hidden">
       <tbody>
-        <tr :class="[props.match.home.score > props.match.away.score ? 'bg-green-200 font-semibold' : 'text-gray-600']">
-          <td class="side-td">
-            {{ props.match.home.team.name }}
-            <span v-if="props.match.home.team.rank" class="rank-pill">
-              {{ props.match.home.team.rank }}
-            </span>
-          </td>
-          <td class="side-td result-td">
-            {{ props.match.home.score }}
-          </td>
-        </tr>
-        <tr :class="[props.match.away.score > props.match.home.score ? 'bg-green-200 font-semibold' : 'text-gray-600']">
-          <td class="side-td">
-            {{ props.match.away.team.name }}
-            <span v-if="props.match.away.team.rank" class="rank-pill">
-              {{ props.match.away.team.rank }}
-            </span>
-          </td>
-          <td class="side-td result-td">
-            {{ props.match.away.score }}
-          </td>
-        </tr>
+        <BracketSideComponent :side="match.home" :otherSideScore="match.away ? match.away.score : null"></BracketSideComponent>
+        <BracketSideComponent :side="match.away" :otherSideScore="match.home ? match.home.score : null"></BracketSideComponent>
       </tbody>
     </table>
   </div>
@@ -31,9 +11,13 @@
 
 <script>
 import { Match } from "../types";
+import BracketSideComponent from "./BracketSideComponent";
 
 export default {
   name: "BracketMatchComponent",
+  components: {
+    BracketSideComponent
+  },
   props: {
     match: {
       type: Match,
@@ -42,15 +26,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.side-td {
-  @apply px-2 py-1;
-}
-.result-td {
-  @apply w-1/6 text-right;
-}
-.rank-pill {
-  @apply text-xs border border-solid rounded-full py-1 px-2 bg-gray-100;
-}
-</style>
