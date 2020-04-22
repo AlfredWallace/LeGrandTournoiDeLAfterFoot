@@ -196,7 +196,14 @@ export default {
             " envoie un message au reste du monde : voilà ce qu'est un champion. C'est bien sûr cruel pour ces jeunes joueurs flamboyants de Layax, qui n'auront été menés au score que 30 secondes, mais ce sont les seules qui comptent." +
             " Une nouvelle fois, le Racing gagne d'un petit point, une nouvelle fois, sa victoire agitera les gazettes, mais une nouvelle fois, le Racing est au tour suivant."
         ),
-        new Match(8, 2, "", new Side(this.teams.dpe, null), new Side(this.teams.jmh, null), ""),
+        new Match(
+          8,
+          2,
+          new Date(2020, 3, 22),
+          new Side(this.teams.dpe, 7),
+          new Side(this.teams.jmh, 8),
+          "" // todo : trash talk 2 équipes / tentative de soudoyer l'arbitre / 0-1 très tôt / 0-2 très lourd 2 actions magnifiques d'entrée / 0-3 Godot FC en feu / 0-4 c'est chaud / 0-5 branlée / 0-6 attention  Allemagne Brésil / 1-6 honneur est sauf / 1-7 olol / 2-7 litigieux / 2-8 / 3-8 / 5-8 / 7-8 double incroyable
+        ),
         new Match(
           8,
           3,
