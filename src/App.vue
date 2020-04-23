@@ -202,7 +202,17 @@ export default {
           new Date(2020, 3, 22),
           new Side(this.teams.dpe, 7),
           new Side(this.teams.jmh, 8),
-          "" // todo : trash talk 2 équipes / tentative de soudoyer l'arbitre / 0-1 très tôt / 0-2 très lourd 2 actions magnifiques d'entrée / 0-3 Godot FC en feu / 0-4 c'est chaud / 0-5 branlée / 0-6 attention  Allemagne Brésil / 1-6 honneur est sauf / 1-7 olol / 2-7 litigieux / 2-8 / 3-8 / 5-8 / 7-8 double incroyable
+          "Rencontre équilibrée sur le papier, équipes offensives, sortez le pop-corn. Petite séance de trash-talk d'avant-match, c'est maintenant la norme quand les Bulls sont là. Ils tentent aussi une nouvelle forme de provocation :" +
+            " la flagornerie envers l'arbitre, non pas pour espérer ses faveurs, puisqu'ils savent la chose impossible, mais pour énerver l'adversaire. Pas mal ! Bref, passons au match. Et quel match ! Le Godot FC ouvre le score dès les premières" +
+            " secondes, sur une action de classe. On a à peine le temps de se dire que les joueurs des Ned Bulls se sont fait surprendre, qu'ils en encaissent un autre ! Incroyable début de partie. Cette double lame a dû les laisser en lambeaux," +
+            " puisque c'est un troisième but qui vient conclure la première période... de la première période. Oui vous lisez bien, déjà 3-0 pour le Godot FC. On pourrait penser qu'un début de gestion pourrait s'installer, mais cela serait" +
+            " méconnaître la philosophie de jeu de cette équipe. Toujours à l'attaque, et, pendant ce temps là - un grand classique - les Bulls se découvrent pour essayer de revenir. De claque, nous allons passer à une boucherie. Contres," +
+            " passes, centres, tout réussit à la tête de série numéro 4 : 4-0, 5-0, 6-0. Le PNB finit quand même par sauver l'honneur et revient à 6-1. Perdu pour perdu, on dirait que ça se débloque dans les têtes, et fatalement dans le jeu." +
+            " Mais ne comptez pas sur l'adversaire du jour pour s'arrêter là. Après ce premier but, ils remettent un pion, 7-1. Les Ned Bulls reviennent à 7-2 ? Allez, 8-2. Puis 8-3, mais, nous allons assister à quelque chose peut-être d'unique." +
+            " En effet, pour ce tournoi on inaugure une nouvelle règle, les buts valent 2 points s'ils sont marqués du rond central (ou de plus loin). Puisque le chrono arrive à son terme, le PNB tente le coup en voyant l'adversaire sortir," +
+            " et marquent, ce qui donne 8-5. Les joueurs du JGFC ne savent plus comment défendre : sortir pour bloquer tous les tirs, ou bloquer les cages ? Profitant de la confusion, les Bulls tentent un nouveau missile, pleine lucarne, 7-8." +
+            " Improbable, mais vrai. Néanmoins, la folie s'arrêtera là, et le coup de sifflet final libérateur qualifiera le Godot FC pour les demies. À noter que les instances mondiales on déjà annoncé l'abandon de cette règle pour la" +
+            " prochaine compétition."
         ),
         new Match(
           8,
@@ -215,9 +225,26 @@ export default {
             " les gauchers vont empiler les buts pour mener jusqu'à 5 à 1. Puis, gérant leur avance, vont concéder quelques buts, mais continuer à en marquer, le match se terminant sur un score assez logique de 8 à 4. Fait notable tout de même :" +
             " un but refusé aux payorais sur hors-jeu en plein milieu du match, est finalement accordé à la VAR en toute fin de rencontre, ce qui en fait l'arbitrage avec le retour en arrière le plus lointain jamais effectué."
         ),
-        new Match(8, 4, new Date(2020, 3, 23), new Side(this.teams.nja, null), new Side(this.teams.dri, null), ""), // petit joueur - a préparé meédiatiquement son élimination
+        new Match(
+          8,
+          4,
+          new Date(2020, 3, 23),
+          new Side(this.teams.nja, 8),
+          new Side(this.teams.dri, 3),
+          "Jusqu'à présent, aucune équipe ne s'est faite éliminer par une autre moins bien classée. Allons-nous assister à la première surprise du tournoi ? Oui, mais pas pour les raisons que vous pensez. Ce match restera dans les annales" +
+            " de l'histoire de l'anti-jeu. Une insulte au baron Coubertin, dont je rappelle la formule «L'important dans la vie ce n'est pas le triomphe mais le combat ; l'essentiel ce n'est pas d'avoir vaincu mais de s'être bien battu»" +
+            " (et non pas «mais d'avoir participé» comme je le l'entends partout, ce qui change du tout au tout, vous en conviendrez). Cette rencontre est l'exact contre-exemple de cette citation. Mais ce n'est pas la seule bizarrerie qui l'entoure" +
+            " car les joueurs du PSJ affirement que l'arbitre leur aurait dit avoir subit des pressions pour faire gagner la Rioloma... Le match démarre sur un faible rythme, mais l'ASR ouvre tout de même le score rapidement. Nouvelle étrangeté," +
+            " l'abitre s'entrechoque avec un joueur et le match est arrêté le temps qu'il reprenne ses esprits. Après la reprise, les jaminsiens égalisent sur corner. Les deux équipes vont marquer encore une fois chacune et rentrer au vestiaire" +
+            " à 2 partout, après une première période bien terne. La seconde commence avec un PSJ plus entreprenant, et logiquement récompensé. 3-2. C'est maintenant que la honte va doucement mais sûrement transformer cette rencontre en parodie" +
+            " de football. Les jaminsiens vont faire le break et donc mener 4 à 2, et les joueurs de la Rioloma vont alors avoir des attidues étranges, hors du tempo. Quelque chose cloche. Ils réussissent à réduire l'écart mais sur un pénalty" +
+            " venant d'une faute gag. Le match continue dans cette anbiance incompréhensible entre questionnement et malaise. Les gens ne pensent pas que des joueurs professionnels puissent simplement abandonner un match de la sorte." +
+            " Pourtant tout devient trop facile pour le PSJ : 5-3, 6-3, 7-3. Comble du mépris, l'ASR donne carrément un ballon de but volontairement ! 8-3. L'arbitre ne fait même pas jouer le temps additionnel et coupe court à cette mascarade." +
+            " La bronca descendant des tribunes est spectaculaire, mais justifiée. Messieurs de la Rioloma, le sport ne vous dit pas merci. Dans les couloirs, les organisateurs sont remontés et les sanctions des instances pourraient tomber" +
+            " rapidement. L'amende, et je ne parle pas que d'argent, pourrait être salée."
+        ),
         new Match(4, 1, null, new Side(this.teams.gbr, null), new Side(this.teams.jmh, null), ""),
-        new Match(4, 2, null, new Side(this.teams.jro, null), null, ""),
+        new Match(4, 2, null, new Side(this.teams.jro, null), new Side(this.teams.nja, null), ""),
         new Match(2, 1, null, null, null, "")
       ];
     },
