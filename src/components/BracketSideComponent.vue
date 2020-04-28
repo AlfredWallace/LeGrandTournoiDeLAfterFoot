@@ -28,14 +28,11 @@ export default {
     side: {
       type: Side
     },
-    otherSideScore: {
-      type: Number
+    sideWins: {
+      type: Boolean
     }
   },
   computed: {
-    sideWins() {
-      return this.side && this.otherSideScore !== null && this.side.score > this.otherSideScore;
-    },
     rankPillClasses() {
       if (!this.side) {
         return "";

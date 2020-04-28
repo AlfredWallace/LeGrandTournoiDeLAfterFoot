@@ -79,7 +79,8 @@ export default {
       return [
         new Match(
           16,
-          1,
+          0,
+          null,
           new Date(2020, 3, 7),
           new Side(this.teams.gbr, 6),
           new Side(this.teams.max, 5),
@@ -93,7 +94,8 @@ export default {
         ),
         new Match(
           16,
-          2,
+          1,
+          null,
           new Date(2020, 3, 9),
           new Side(this.teams.edm, 4),
           new Side(this.teams.kdi, 7),
@@ -108,7 +110,8 @@ export default {
         ),
         new Match(
           16,
-          3,
+          2,
+          null,
           new Date(2020, 3, 15),
           new Side(this.teams.dpe, 8),
           new Side(this.teams.jth, 7),
@@ -119,7 +122,8 @@ export default {
         ),
         new Match(
           16,
-          4,
+          3,
+          null,
           new Date(2020, 3, 8),
           new Side(this.teams.pdu, 4),
           new Side(this.teams.jmh, 8),
@@ -129,7 +133,8 @@ export default {
         ),
         new Match(
           16,
-          5,
+          4,
+          null,
           new Date(2020, 3, 16),
           new Side(this.teams.jro, 11),
           new Side(this.teams.aro, 4),
@@ -139,7 +144,8 @@ export default {
         ),
         new Match(
           16,
-          6,
+          5,
+          null,
           new Date(2020, 3, 14),
           new Side(this.teams.fpi, 7),
           new Side(this.teams.llp, 9),
@@ -157,7 +163,8 @@ export default {
         ),
         new Match(
           16,
-          7,
+          6,
+          null,
           new Date(2020, 3, 10),
           new Side(this.teams.nja, 10),
           new Side(this.teams.lch, 2),
@@ -169,7 +176,8 @@ export default {
         ),
         new Match(
           16,
-          8,
+          7,
+          null,
           new Date(2020, 3, 13),
           new Side(this.teams.pve, 3),
           new Side(this.teams.dri, 9),
@@ -181,7 +189,8 @@ export default {
         ),
         new Match(
           8,
-          1,
+          0,
+          null,
           new Date(2020, 3, 20),
           new Side(this.teams.gbr, 9),
           new Side(this.teams.kdi, 8),
@@ -198,7 +207,8 @@ export default {
         ),
         new Match(
           8,
-          2,
+          1,
+          null,
           new Date(2020, 3, 22),
           new Side(this.teams.dpe, 7),
           new Side(this.teams.jmh, 8),
@@ -216,7 +226,8 @@ export default {
         ),
         new Match(
           8,
-          3,
+          2,
+          null,
           new Date(2020, 3, 21),
           new Side(this.teams.jro, 8),
           new Side(this.teams.llp, 4),
@@ -227,7 +238,8 @@ export default {
         ),
         new Match(
           8,
-          4,
+          3,
+          null,
           new Date(2020, 3, 23),
           new Side(this.teams.nja, 8),
           new Side(this.teams.dri, 3),
@@ -243,28 +255,38 @@ export default {
             " La bronca descendant des tribunes est spectaculaire, mais justifiée. Messieurs de la Rioloma, le sport ne vous dit pas merci. Dans les couloirs, les organisateurs sont remontés et les sanctions des instances pourraient tomber" +
             " rapidement. L'amende, et je ne parle pas que d'argent, pourrait être salée."
         ),
-        new Match(4, 1, null, new Side(this.teams.gbr, null), new Side(this.teams.jmh, null), ""),
-        new Match(4, 2, null, new Side(this.teams.jro, null), new Side(this.teams.nja, null), ""),
-        new Match(2, 1, null, null, null, "")
+        // TODO aller FCS reçoit JGFC : 0-1 / 0-2 chaud / 1-2 / 2-2 / 3-2 / 4-2 / 5-2 énorme but magnifique / 6-2 / 6-3 l'espoir renaît / 7-3 contre ultra rapide / 7-4 / 7-5 / 8-5 but à domicile / 8-6 la fin approche / 8-7 beau résultat
+        new Match(4, 0, 0, new Date(2020, 3, 28), new Side(this.teams.gbr, 8), new Side(this.teams.jmh, 7), "Résumé à venir."),
+        new Match(4, 0, 1, new Date(2020, 3, 30), new Side(this.teams.jmh, null), new Side(this.teams.gbr, null), ""),
+        // TODO aller PSJ reçoit FCPG : 0-1 d'entrée / 1-1 beau but / 1-2 / 2-2 arbitrage un peu domicile / 2-3 / 3-3 but maison / 3-4 direct après / 5-4 incroyable but du rond central / 5-5 égalisation dans la confusion
+        // TODO 5-6 grosse perf du FCPG / 6-6 / 6-7 ohlala / 7-7 gros gros match coup pour coup saibo / 7-8 on entre dans temps additionnel / 8-8 incroyable / 9-8 SUR LE FIL
+        new Match(4, 1, 0, new Date(2020, 3, 27), new Side(this.teams.nja, 9), new Side(this.teams.jro, 8), "Résumé à venir."),
+        new Match(4, 1, 1, new Date(2020, 3, 29), new Side(this.teams.jro, null), new Side(this.teams.nja, null), ""),
+        new Match(2, 0, 0, null, null, null, ""),
+        new Match(2, 0, 1, null, null, null, "")
       ];
     },
     rounds() {
       return [
         new Round(
           "Huitièmes",
-          this.matches.filter(match => match.round === 16)
+          this.matches.filter(match => match.round === 16),
+          false
         ),
         new Round(
           "Quarts",
-          this.matches.filter(match => match.round === 8)
+          this.matches.filter(match => match.round === 8),
+          false
         ),
         new Round(
           "Demies",
-          this.matches.filter(match => match.round === 4)
+          this.matches.filter(match => match.round === 4),
+          true
         ),
         new Round(
           "Finale",
-          this.matches.filter(match => match.round === 2)
+          this.matches.filter(match => match.round === 2),
+          true
         )
       ];
     }

@@ -14,9 +14,10 @@ export class Side {
 }
 
 export class Match {
-  constructor(round, order, date, home, away, summary) {
+  constructor(round, order, legOrder, date, home, away, summary) {
     this.round = round;
     this.order = order;
+    this.legOrder = legOrder;
     this.date = date;
     this.readableDate = formatDate(date);
     this.home = home;
@@ -26,9 +27,10 @@ export class Match {
 }
 
 export class Round {
-  constructor(title, matches) {
+  constructor(title, matches, legged) {
     this.title = title;
     this.matches = matches;
+    this.legged = legged;
   }
 }
 

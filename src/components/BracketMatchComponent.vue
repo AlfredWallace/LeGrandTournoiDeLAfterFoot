@@ -1,9 +1,9 @@
 <template>
-  <div class="shadow-md my-2 table-fixed font-mono border border-solid">
+  <div class="shadow-md my-2 font-mono border border-solid">
     <table class="w-full overflow-hidden">
       <tbody>
-        <BracketSideComponent :side="match.home" :otherSideScore="match.away ? match.away.score : null"></BracketSideComponent>
-        <BracketSideComponent :side="match.away" :otherSideScore="match.home ? match.home.score : null"></BracketSideComponent>
+        <BracketSideComponent :side="match.home" :side-wins="firstTeamWins"></BracketSideComponent>
+        <BracketSideComponent :side="match.away" :side-wins="!firstTeamWins"></BracketSideComponent>
       </tbody>
     </table>
   </div>
@@ -22,6 +22,11 @@ export default {
     match: {
       type: Match,
       required: true
+    }
+  },
+  computed: {
+    firstTeamWins() {
+      return this.match.home.score > this.match.away.score;
     }
   }
 };
