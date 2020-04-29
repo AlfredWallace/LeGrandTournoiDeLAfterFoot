@@ -255,13 +255,61 @@ export default {
             " La bronca descendant des tribunes est spectaculaire, mais justifiée. Messieurs de la Rioloma, le sport ne vous dit pas merci. Dans les couloirs, les organisateurs sont remontés et les sanctions des instances pourraient tomber" +
             " rapidement. L'amende, et je ne parle pas que d'argent, pourrait être salée."
         ),
-        // TODO aller FCS reçoit JGFC : 0-1 / 0-2 chaud / 1-2 / 2-2 / 3-2 / 4-2 / 5-2 énorme but magnifique / 6-2 / 6-3 l'espoir renaît / 7-3 contre ultra rapide / 7-4 / 7-5 / 8-5 but à domicile / 8-6 la fin approche / 8-7 beau résultat
-        new Match(4, 0, 0, new Date(2020, 3, 28), new Side(this.teams.gbr, 8), new Side(this.teams.jmh, 7), "Résumé à venir."),
+        new Match(
+          4,
+          0,
+          0,
+          new Date(2020, 3, 28),
+          new Side(this.teams.gbr, 8),
+          new Side(this.teams.jmh, 7),
+          "Grosse affiche pour cette seconde demie aller. Les deux équipes ont néanmoins un parcours entâché soit de soupçon de favoritisme, soit de préparatifs à la limite de la légalité. La rencontre débute étrangement lentement," +
+            " mais la situation va soudainement se débloquer et le jeu s'accélérer. C'est le JGFC qui va ouvrir les hostilités, et, profitant du manque de réaction de l'adversaire, doubler la mise dans la foulée. 0-2, le favori est en mauvaise posture," +
+            " mais le match est loin d'être terminé. Sur une action un peu confuse, les strasbrisbois vont réduire l'écart. Après un petit moment de flottement, sur une autre action apparemment anodine, ils vont égaliser, 2 partout. La physionomie du match" +
+            " va alors radicalement changer. Le Racing retrouve son meilleur niveau et roule littéralement sur son adversaire, en collant 4 buts d'affilé et mener 6 à 2, dont une magnifique action d'école sur le cinquième. Les joueurs du Godot FC" +
+            " vont sortir la tête de l'eau et réduire l'écart, mais les strasbrisbois remarquent instantanéement sur un contre assassin. L'outsider n'a pas dit son dernier mot, se lance corps et âme à l'offensive. Il réussit à faire douter l'adversaire." +
+            " Incompréhension entre les défenseurs du Racing : 7-4. Passe en retrait interceptée : 7-5. La tension monte. Sur l'aciton suivante, l'arbitre siffle pénalty pour le RCS ! C'est très litigieux, une nouvelle polémique s'installe, mais le but" +
+            " est marqué, 8-5. Nous arrivons à la fin du match, la peur a définitivement gagné les jambes strasbrisboises, et c'est maintenant une attaque-défense du JGFC. Réduction de l'écart juste avant le temps additionnel, 8-6, le Godot FC" +
+            " va-t-il arracher la prolongation ? Le suspense est insoutenable ! Nouveau but, 8-7 ! Et l'arbitre siffle la fin du match ! C'est encore une fois d'un petit but d'écart que le Racing s'en sort, décidément ! Le match retour promet" +
+            " d'être bouillant."
+        ),
         new Match(4, 0, 1, new Date(2020, 3, 30), new Side(this.teams.jmh, null), new Side(this.teams.gbr, null), ""),
-        // TODO aller PSJ reçoit FCPG : 0-1 d'entrée / 1-1 beau but / 1-2 / 2-2 arbitrage un peu domicile / 2-3 / 3-3 but maison / 3-4 direct après / 5-4 incroyable but du rond central / 5-5 égalisation dans la confusion
-        // TODO 5-6 grosse perf du FCPG / 6-6 / 6-7 ohlala / 7-7 gros gros match coup pour coup saibo / 7-8 on entre dans temps additionnel / 8-8 incroyable / 9-8 SUR LE FIL
-        new Match(4, 1, 0, new Date(2020, 3, 27), new Side(this.teams.nja, 9), new Side(this.teams.jro, 8), "Résumé à venir."),
-        new Match(4, 1, 1, new Date(2020, 3, 29), new Side(this.teams.jro, null), new Side(this.teams.nja, null), ""),
+        new Match(
+          4,
+          1,
+          0,
+          new Date(2020, 3, 27),
+          new Side(this.teams.nja, 9),
+          new Side(this.teams.jro, 8),
+          "Pour cette première demi-finale aller, le Paris Saint-Jamin reçoit l'un des trois favoris à la victoire finale. Mais, en ayant éliminé un des deux autres au tour précédent, malgré le contexte que l'on sait," +
+            " l'outsider ne l'est pas forcément de beaucoup. Le match démarre mal pour les joueurs jaminsiens, le FC Patte Gauche attaquant pied au plancher et marquant dès les premières secondes. Le PSJ ne laisse pas le doute s'installer" +
+            " et égalise sur une belle action collective. Le favori continue de mettre la pression et reprend l'avantage, 1-2. Les jaminsiens continuent d'envoyer du beau jeu et égalisent à nouveau. Le but est probalement entâché d'un" +
+            " léger hors-jeu, mais l'arbitre, peut-être sous-pression, l'accorde. Les équipes vont d'un camp à l'autre à une vitesse incroyable, les défenses sont aux abois. 2-3, 3-3 (à nouveau un hors jeu ? Difficile à dire.), puis 3-4." +
+            " Grosse erreur du gardien du FCPG qui cherchait le camp adverse du pied et était sorti : punition immédiate d'un lob du rond central, but compte double pour le PSJ qui prend la tête pour la première fois du match, 5 à 4 !" +
+            " Les joueurs de la Patte Gauche décident de monter l'intensité d'un cran. Le pressing devient très physique et paye, ils vont marquer deux fois dans les minutes suivantes. Les efforts déployés vont avoir un impact sur la lucidité" +
+            " défensive, et les jaminsiens vont encore une fois égaliser, nous sommes alors à 6 partout. L'envie répond à la technique, 6-7, 7-7. Juste avant l'entrée dans le temps additionnel, le FCPG met son huitième but, le K.O. est proche." +
+            " Mais le K.O. de qui ? Le favori pensait peut-être avoir pris un ascendant psychologique, mais, poussé par son public, le PSJ va égaliser juste après. L'arbitre regarde sa montre, le banc de la Patte Gauche met une pression dingue." +
+            " Il reste un corner, celui de la dernière chance pour arracher la victoire sur le fil. Tiré à merveille, déposé sur la tête du capitaine, comme un symbole. le cuir finit au fond des filets. Explosion du stade, victoire 9-8 des locaux." +
+            " Évidemment, c'est un bon score à l'exterieur, mais les joueurs du FCPG étaient venus faire un résultat. Étant invaincus à domicile cette saison, on peut supposer que le match retour sera une toute autre histoire, mais ils sont prévenus."
+        ),
+        new Match(
+          4,
+          1,
+          1,
+          new Date(2020, 3, 29),
+          new Side(this.teams.jro, 8),
+          new Side(this.teams.nja, 7),
+          "Match retour de la première demie-finale gagnée sur le fil 9 à 8 par le PSJ. Le FC Patte Gauche reste favori pour la qualification, mais ne s'attend pas à ce que ce soit facile. Dés les premières secondes, le ton est donné," +
+            " et l'on sent que les jaminsiens veulent frapper fort d'entrée afin d'essayer d'assomer l'adversaire. La puissance de feu de leur attaque va écraser d'entrée la défense du FCPG et planter non pas un ni deux mais trois buts" +
+            " avant même la moitié de la première période. 0-3, stupeur dans les tribunes, la qualification s'éloigne à grands pas ! Le ballon tourne à une vitesse folle, les têtes aussi. Les joueurs de la Patte Gauche se mettent à" +
+            " bousculer physiquement leur adversaire afin de le contrer, et finissent par reprendre le contrôle du jeu. Doucement mais sûrement, la technique fait son effet, et les buts arrivent. 1-3, 2-3, puis 3-3, les jaminsiens ne" +
+            " trouvent pas tellement de solutions. Le FCPG vire en tête avant la pause, 4-3, le choc du début de match est maintenant effacé. Au retour des vestiaires, les visiteurs cueilent à nouveau à froid le favori pour revenir à hauteur !" +
+            " Mais très vite le rouleau compresseur se remet en route, et les joueurs du FC Patte Gauche vont marquer sur deux de leurs trois occasions énormes pour mener 6-4. Le PSJ sent que la qualification lui échappe, mais n'a pas" +
+            " tellement d'autre choix que tenter le tout pour le tout. Les équipes vont se rendre la monnaie de leurs pièces tour à tour, pour un final extraordinaire. Les jaminsiens reviennent à 6-5, mais en réattaquant pour tenter l'égalisation," +
+            " se font contrer et distancer à 7-5. L'entraîneur fait all-in avec son attaque, la défense tient miraculeusement, un premier but est marqué, 7-6. Nous sommes maintenant dans le temps additionnel, un nul suffirait. Sur une incroyable" +
+            " action avec des passes à risque de toute part que seul le désespoir autorise à tenter, le PSJ revient à hauteur et se qualifie virtuellement ! Il doit rester une ou deux actions à jouer, tous les acteurs sont dans un état second !" +
+            " C'est maintanant le FCPG qui se jette sur les buts adverses... Et obtient un corner... Le scénario du match aller peut-il se répéter, mais à l'inverse ? Cette fois, il n'y aura pas de match retour, c'est certainement la dernière action," +
+            " le gardien monte, perdu pour perdu. Le corner est tiré. Une longue balle second poteau, une tête hors du lot, un saut improbable, un lob, une lucarne. 11 joueurs baissent la tête, 11 autres exultent, la Patte Gauche est en finale."
+        ),
         new Match(2, 0, 0, null, null, null, ""),
         new Match(2, 0, 1, null, null, null, "")
       ];
