@@ -243,7 +243,20 @@ export default {
               new Date(2020, 3, 30),
               new Side(this.teams.jmh, 6),
               new Side(this.teams.gbr, 4),
-              " 0-1 / 1-1 / 1-2 / 2-2 / mort de lol trompage gardien soupçon de favoritisme / 3-2 / 3-3 / 4-3 / 5-3 chaud perte de temps menace de pénalité jaune / 5-4 / 6-4 piège de ouf / INCROYABLE"
+              "Dernière rencontre de ces demi-finales, pour rejoindre le FC Patte Gauche. Le favori de la compétition, bien que présent à ce stade, a démontré qu'il n'était peut-être pas si solide que cela. Vainqueur à domicile à l'aller," +
+                " mais seulement d'un point, le RC Strasbrisbois va devoir afficher un niveau à la hauteur de son statut. Le match commence par un but de ce dernier, mais le Godot FC égalise peu de temps après. Le match est pour l'instant très" +
+                " équilibré. Le RCS va à nouveau prendre la tête, et à nouveau se faire égaliser, 2 partout. La prochaine action restera peut-être comme le tournant du match. En effet, malgré un tacle appuyé d'un strasbrisbois sur un joueur adverse," +
+                " ce dernier réussit tout de même une passe magnifique qui mit l'attaque du Godot FC en supériorité numérique 4 contre 2. L'arbitre ne laissa pas jouer l'avantage, s'attirant les foudres des joueurs et du staff. Une fois la tension" +
+                " retombée et le coup franc joué, on constate imméditement deux choses : le JGFC, probablement mu par un sentiment d'injustice, monte l'intensité d'un cran, et à l'inverse, le Racing devient fébrile. La rencontre tourne maintenant" +
+                " clairement à l'avantage des locaux, mais ils ne concrétisent pas encore. Les strasbrisbois jouent le nul, qui leur suffit. Mais c'est un jeu dangereux, et à l'approche de la fin de la rencontre, le Godot FC finit par marquer." +
+                " À 3-2, ce sont eux les qualifiés ! Le RCS se remet à jouer, et égalise rapidement, on se dit qu'ils auraient pu ne pas attendre... 3-3. Malgré l'égalisation, les joueurs du JGFC sentent qu'il y a quelque chose à faire. Ils poussent," +
+                " et sont récompensés, 4-3. Cette fois, ils contiennent la tentative d'égalisation et interceptent la balle, l'attaquant de pointe file seul au but, décale le gardien, 5-3 ! Deux buts d'avance, la grosse perf se rapproche !" +
+                " Nous allons bientôt entrer dans le temps additionnel, les espaces sont maintenant énormes, le Racing fait du houra-football et tente n'importe quoi... Et finit par marquer sur une action complètement désorganisée. 5-4, mais ce n'est" +
+                " pas suffisant ! Le Fergie time arrive maintenant à son terme, mais le RCS a obtenu un dernier corner avec un pressing extrême. Tous les joueurs montent, même le gardien évidemment. Ça sera la dernière action. Très bizarrement, " +
+                " ils le tirent à deux, pour décaler, ce qui donne une frappe ratée dans la surface (comme toujours) ! L'arbitre ne siffle toujours pas, les joueurs du Godot FC dégagent, mais un de leurs attaquant était resté proche du rond central," +
+                " et la récupère, il se retrouve donc seul, avec pour seul adversaire le dernier défenseur puisque le gardien n'a pas eu le temps de revenir ! Il part en travers, décale, et décoche une longue frappe au sol, tous les yeux sont rivés" +
+                " sur la trajectoire... qui termine dans le buts. 6-4, 13-12 sur les deux rencontres pour le JGFC, c'est terminé. Beaux joueurs, les strasbrisbois félicitent leur bourreau du jour. Il fallait bien que ça casse un jour, à force de passer" +
+                " d'un point à chaque tour. La finale sera donc FC Patte Gauche contre Jonathandan Godot FC, respectivement têtes de série 3 et 4, et se jouera en playoff, le premier à 3 victoires. Le spectacle sera au rendez-vous !"
             )
           ),
           new LeggedMatchGroup(
