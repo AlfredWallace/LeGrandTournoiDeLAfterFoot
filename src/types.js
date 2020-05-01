@@ -1,19 +1,42 @@
-export class Team {
-  constructor(name, shortName, rank) {
-    this.name = name;
-    this.shortName = shortName;
-    this.rank = rank;
-  }
+export const CONFRONTATION_TYPE_SINGLE = "single";
+export const CONFRONTATION_TYPE_LEG = "leg";
+export const CONFRONTATION_TYPE_PLAYOFF = "playoff";
+
+export function Team(name, shortName, rank) {
+  this.name = name;
+  this.shortName = shortName;
+  this.rank = rank;
 }
 
-export class Side {
-  constructor(team, score) {
-    this.team = team;
-    this.score = score;
-  }
+export function Side(team, score) {
+  this.team = team;
+  this.score = score;
 }
 
-export class Match {
+export function Match(date, home, away, summary) {
+  this.date = date;
+  this.readableDate = formatDate(date);
+  this.home = home;
+  this.away = away;
+  this.summary = summary;
+}
+
+export function LeggedMatchGroup(matchA, matchB) {
+  this.matchA = matchA;
+  this.matchB = matchB;
+}
+
+export function PlayOffMatchGroup(matches) {
+  this.matches = matches;
+}
+
+export function Round(title, confrontationsType, confrontations) {
+  this.title = title;
+  this.confrontationsType = confrontationsType;
+  this.confrontations = confrontations;
+}
+
+export class MatchOld {
   constructor(round, order, legOrder, date, home, away, summary) {
     this.round = round;
     this.order = order;
@@ -23,14 +46,6 @@ export class Match {
     this.home = home;
     this.away = away;
     this.summary = summary;
-  }
-}
-
-export class Round {
-  constructor(title, matches, legged) {
-    this.title = title;
-    this.matches = matches;
-    this.legged = legged;
   }
 }
 

@@ -1,9 +1,10 @@
 <template>
-  <div class="shadow-md my-2 font-mono border border-solid">
+  <div>
+    <h4 class="text-xs italic text-gray-600 mb-1">{{ confrontation.readableDate }}</h4>
     <table class="w-full overflow-hidden">
       <tbody>
-        <BracketSideComponent :side="match.home" :side-wins="firstTeamWins"></BracketSideComponent>
-        <BracketSideComponent :side="match.away" :side-wins="!firstTeamWins"></BracketSideComponent>
+        <BracketSideComponent :side="confrontation.home" :side-wins="firstTeamWins"></BracketSideComponent>
+        <BracketSideComponent :side="confrontation.away" :side-wins="!firstTeamWins"></BracketSideComponent>
       </tbody>
     </table>
   </div>
@@ -19,14 +20,14 @@ export default {
     BracketSideComponent
   },
   props: {
-    match: {
+    confrontation: {
       type: Match,
       required: true
     }
   },
   computed: {
     firstTeamWins() {
-      return this.match.home.score > this.match.away.score;
+      return this.confrontation.home.score > this.confrontation.away.score;
     }
   }
 };

@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import { Match } from "../types";
+import { MatchOld } from "../types";
 
 export default {
   name: "SummaryMatchComponent",
   props: {
     match: {
-      type: Match,
+      type: MatchOld,
       required: true
     }
   }
