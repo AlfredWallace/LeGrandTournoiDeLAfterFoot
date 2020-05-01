@@ -14,7 +14,7 @@
 
       <PageSectionComponent title="Déroulé de la compétition">
         <div class="grid grid-cols-1 gap-6">
-          <SummaryRoundComponent v-for="(round, index) in roundsOld" :round="round" :key="index"></SummaryRoundComponent>
+          <SummaryRoundComponent v-for="(round, index) in rounds" :round="round" :key="index"></SummaryRoundComponent>
         </div>
       </PageSectionComponent>
 
@@ -76,8 +76,8 @@ export default {
   },
   computed: {
     rounds() {
-      return {
-        huitiemes: new Round("Huitièmes", CONFRONTATION_TYPE_SINGLE, [
+      return [
+        new Round("Huitièmes", CONFRONTATION_TYPE_SINGLE, [
           new Match(
             new Date(2020, 3, 7),
             new Side(this.teams.gbr, 6),
@@ -165,7 +165,7 @@ export default {
               " de faire gonfler un peu leurs statistiques, jusqu'à 6-3. La fin de matche sera à sens unique pour l'AS Rioloma qui se qualifie logiquement 9 à 3."
           )
         ]),
-        quarts: new Round("Quarts", CONFRONTATION_TYPE_SINGLE, [
+        new Round("Quarts", CONFRONTATION_TYPE_SINGLE, [
           new Match(
             new Date(2020, 3, 20),
             new Side(this.teams.gbr, 9),
@@ -223,7 +223,7 @@ export default {
               " rapidement. L'amende, et je ne parle pas que d'argent, pourrait être salée."
           )
         ]),
-        demies: new Round("Demies", CONFRONTATION_TYPE_LEG, [
+        new Round("Demies", CONFRONTATION_TYPE_LEG, [
           new LeggedMatchGroup(
             new Match(
               new Date(2020, 3, 28),
@@ -280,11 +280,14 @@ export default {
             )
           )
         ]),
-        finale: new Round("Finale", CONFRONTATION_TYPE_PLAYOFF, [new PlayOffMatchGroup([])])
-      };
-    },
-    roundsOld() {
-      return [];
+        new Round("Finale", CONFRONTATION_TYPE_PLAYOFF, [
+          new PlayOffMatchGroup([
+            new Match(null, new Side(this.teams.jro, null), new Side(this.teams.jmh, null), ""),
+            new Match(null, new Side(this.teams.jro, null), new Side(this.teams.jmh, null), ""),
+            new Match(null, new Side(this.teams.jro, null), new Side(this.teams.jmh, null), "")
+          ])
+        ])
+      ];
     }
   }
 };

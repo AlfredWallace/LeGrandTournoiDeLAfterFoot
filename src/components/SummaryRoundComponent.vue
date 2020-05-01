@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { Round } from "../types";
+import { CONFRONTATION_TYPE_LEG, CONFRONTATION_TYPE_PLAYOFF, Round } from "../types";
 import SummaryMatchComponent from "./SummaryMatchComponent";
 
 export default {
@@ -22,10 +22,37 @@ export default {
   },
   computed: {
     matchesByDate() {
-      return this.round.matches
-        .filter(match => match.summary && match.date)
+      let matches;
+
+      switch (this.round.confrontationsType) {
+        case CONFRONTATION_TYPE_LEG:
+          matches = this.round.confrontations.reduce((matchesAcc, leggedMatchGroup) => {
+            matchesAcc.push(leggedMatchGroup.matchA);
+            matchesAcc.push(leggedMatchGroup.matchB);
+            return matchesAcc;
+          }, []);
+          break;
+        case CONFRONTATION_TYPE_PLAYOFF:
+          matches = this.round.confrontations.reduce((matchesAcc, playoffMatchGroup) => {
+            return matchesAcc.concat(playoffMatchGroup.matches);
+          }, []);
+          break;
+        default:
+          matches = this.round.confrontations;
+      }
+
+      return matches
+        .filter(this.matchFilter)
         .slice()
-        .sort((matchA, matchB) => matchA.date - matchB.date);
+        .sort(this.matchSort);
+    }
+  },
+  methods: {
+    matchFilter(match) {
+      return match.summary && match.date;
+    },
+    matchSort(matchA, matchB) {
+      return matchA.date - matchB.date;
     }
   }
 };

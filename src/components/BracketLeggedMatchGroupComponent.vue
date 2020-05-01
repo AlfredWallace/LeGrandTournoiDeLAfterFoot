@@ -37,8 +37,8 @@ export default {
     },
     isOver() {
       return (
-        this.matches[0].home &&
-        this.matches[0].away &&
+        this.matches[0].home !== null &&
+        this.matches[0].away !== null &&
         this.matches[0].home.score !== null &&
         this.matches[1].home.score !== null &&
         this.matches[0].away.score !== null &&
